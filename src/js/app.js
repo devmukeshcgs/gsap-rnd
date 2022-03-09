@@ -4,3 +4,6 @@ import html from "../about.html";
 
 /* Demo JS */
 import './demo.js';
+import './main-scroll.js';
+import './banner.js';
+import './wave.js';

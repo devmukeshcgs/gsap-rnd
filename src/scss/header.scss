@@ -1,26 +1,106 @@
 header {
-    background: rgba(0, 0, 0, 0.9);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+    // display: none;
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    // border-bottom: 1px solid#ccc;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     position: fixed;
-    width: 100vw;
+    width: 100%;
+    z-index: 999;
+    // padding: 1rem 0;
     top: 0;
     left: 0;
     right: 0;
     min-height: 50px;
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 1rem;
+        z-index: 1;
+    }
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0px 1rem;
         ul {
             display: flex;
             li {
                 a {
                     display: block;
-                    padding: 12px 24px;
+                    padding: 0.5rem;
                     font-family: 'DINP-R';
-                    color: #fff;
+                    color: #383838;
                     text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.bar {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+}
+
+.div1 {
+    flex: 1;
+    background-color: #ce243d;
+}
+
+.div2 {
+    background-color: #00ade8;
+    flex: 2;
+}
+
+.div3 {
+    background-color: #f76d37;
+    flex: 3;
+}
+
+.div4 {
+    background-color: #ffc200;
+    flex: 4;
+}
+
+.div5 {
+    background-color: #ee5b95;
+    flex: 5;
+}
+
+.div6 {
+    background-color: #ffc200;
+    flex: 6;
+}
+
+@media only screen and (max-width: $mobile-width) {
+    header {
+        .logo {
+            padding: 0.5rem;
+        }
+        .container {
+            flex-direction: column;
+            nav {
+                display: none;
+                flex-direction: column;
+                ul {
+                    flex-direction: column;
                 }
             }
         }

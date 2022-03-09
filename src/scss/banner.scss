@@ -1,0 +1,143 @@
+$lineHeight :200px;
+.line-row {
+    display: flex;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: ($lineHeight/4);
+    // margin-left: 25px;
+    // margin-right: 25px;
+    .line {
+        border-radius: $lineHeight;
+        height: $lineHeight;
+        width: $lineHeight;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        -webkit-transition: all 1000ms ease;
+        -moz-transition: all 1000ms ease;
+        -ms-transition: all 1000ms ease;
+        -o-transition: all 1000ms ease;
+        transition: all 1000ms ease;
+        &.small {
+            width: 200px;
+            &.right {
+                justify-content: flex-end;
+            }
+            &.left {
+                justify-content: flex-start;
+            }
+        }
+        &.mid {
+            width: 250px;
+            &.right {
+                justify-content: flex-end;
+            }
+            &.left {
+                justify-content: flex-start;
+            }
+        }
+        &.large {
+            width: 350px;
+            &.right {
+                justify-content: flex-end;
+            }
+            &.left {
+                justify-content: flex-start;
+            }
+        }
+        .char-img {
+            border-radius: $lineHeight;
+            margin: 25px;
+            width: ($lineHeight - 50);
+            height: ($lineHeight - 50);
+            background-color: #fff;
+        }
+        &:nth-child(1) {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+        &:nth-last-child(1) {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile-width) {
+    $lineHeightMob: 100px;
+    #sec0 {
+        display: flex;
+        justify-content: space-around;
+    }
+    .line-row {
+        // flex-direction: column;
+        display: block;
+        margin-bottom: ($lineHeightMob/4);
+        .line {
+            border-radius: $lineHeightMob;
+            height: $lineHeightMob;
+            width: $lineHeightMob;
+            margin-bottom: 15px;
+            &.small {
+                width: $lineHeightMob;
+                height: $lineHeightMob * 1.3;
+                &.right {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                &.left {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+            &.mid {
+                width: $lineHeightMob;
+                height: $lineHeightMob *1.8;
+                &.right {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                &.left {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+            &.large {
+                width: $lineHeightMob;
+                height: $lineHeightMob *2.5;
+                &.right {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+                &.left {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+            .char-img {
+                border-radius: $lineHeightMob;
+                margin: 25px;
+                width: ($lineHeightMob - 50);
+                height: ($lineHeightMob - 50);
+                background-color: #fff;
+            }
+            &:nth-child(1) {
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: $lineHeightMob;
+            }
+            &:nth-last-child(1) {
+                border-top-right-radius: $lineHeightMob;
+                border-bottom-left-radius: $lineHeightMob;
+                border-bottom-right-radius: $lineHeightMob;
+            }
+        }
+    }
+}

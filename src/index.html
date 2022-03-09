@@ -5,37 +5,221 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBPACK 5</title>
+    <title>gsap rnd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+    <!-- <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script> -->
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Link</a>
-                </li>
-                <li>
-                    <a href="">Link</a>
-                </li>
-                <li>
-                    <a href="">Link</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/logo.svg" width="120" alt="">
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li>
+                        <a href="#sec1">About</a>
+                    </li>
+                    <li>
+                        <a href="#sec2">Features</a>
+                    </li>
+                    <li>
+                        <a href="#sec3">Purches</a>
+                    </li>
+                    <li>
+                        <a href="#sec4">Waves</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="btn capsule">
+                            <span class="btn-lable"> Login</span>
+                    </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
-    <main>
-        <section>
-            <h1>section-1</h1>
-        </section>
-        <section>
-            <h1>section-2</h1>
-        </section>
-        <section>
-            <h1>section-3</h1>
-        </section>
-    </main>
-    <footer></footer>
+
+    <!-- 
+    <div id="viewport">
+        <div id="scroll-container">
+      
+          <div id="box1" class="box box-a">a</div>
+          <div id="box2" class="box box-b">b</div>
+          <div id="box3" class="box box-c">c</div>
+      
+          <div class="line"></div>
+      
+          <header>
+            <a href="https://greensock.com/scrolltrigger">
+              <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/greensock-logo-icon.svg" width="85" />
+              <span class="name">ScrollTrigger</span>
+            </a>
+          </header>
+        </div>
+      </div> -->
+    <div id="viewport">
+        <div id="scroll-container">
+            <main>
+                <section id="sec0" class="full no-pad">
+                    <div class="line-row">
+                        <div class="line mid right">
+
+                        </div>
+                        <div class="line">
+                        </div>
+                        <div class="line small left">
+                            <div class="char-img"></div>
+                        </div>
+                        <div class="line large"></div>
+                        <div class="line mid left">
+
+                        </div>
+                    </div>
+                    <div class="line-row">
+                        <div class="line"></div>
+                        <div class="line large"></div>
+                        <div class="line mid"></div>
+                        <div class="line small"></div>
+                        <div class="line large left">
+                            <div class="char-img"></div>
+                        </div>
+                    </div>
+                    <div class="line-row">
+                        <div class="line"></div>
+                        <div class="line">
+                            <div class="char-img"></div>
+                        </div>
+                        <div class="line large"></div>
+                        <!-- <div class="line mid"></div> -->
+                        <div class="line small"></div>
+                        <div class="line small"></div>
+                    </div>
+                    <!-- <div class="line-row">
+                        <div class="line mid"></div>
+                        <div class="line"></div>
+                        <div class="line small"></div>
+                        <div class="line large right">
+                            <div class="char-img"></div>
+                        </div>
+                        <div class="line mid"></div>
+                    </div> -->
+                </section>
+
+                <section id="sec1">
+                    <h1>Heading</h1>
+                    <h2>Heading</h2>
+                    <h3>Heading</h3>
+                    <h4>Heading</h4>
+                    <h5>Heading</h5>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur quasi
+                        ullam!
+                    </p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur quasi
+                        ullam!
+                    </p>
+                </section>
+                <section id="sec2">
+                    <h1>Buttons</h1>
+                    <a href="#">Link</a><br/>
+                    <button class="btn">Button</button>
+                    <button class="btn outline">Button</button>
+                    <button class="btn round">Button</button>
+                    <button class="btn capsule">Button</button>
+                    <button class="btn capsule icon">
+                        <span class="btn-lable"> Button</span>
+                        <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                    </button>
+                </section>
+                <section id="sec3">
+                    <div class="cards">
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards one-two">
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="sec4" class="full">
+                    <div style="position: relative;">
+                        <div class="section-wave-container top">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
+                        </div>
+                        <div class="section-wave-container bottom">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave-two" d=""/></svg>
+                        </div>
+                        <div class="bar">
+                            <div class="div1"></div>
+                            <div class="div2"></div>
+                            <div class="div3"></div>
+                            <div class="div4"></div>
+                            <div class="div5"></div>
+                            <!-- <div class="div6"></div> -->
+                        </div>
+                    </div>
+                </section>
+                <section id="sec5"></section>
+            </main>
+            <footer></footer>
+        </div>
+    </div>
 </body>
 
 </html>
