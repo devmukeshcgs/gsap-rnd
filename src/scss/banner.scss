@@ -53,11 +53,39 @@ $lineHeight :200px;
             }
         }
         .char-img {
+            position: relative;
             border-radius: $lineHeight;
             margin: 25px;
             width: ($lineHeight - 50);
             height: ($lineHeight - 50);
             background-color: #fff;
+            img {
+                border-radius: $lineHeight;
+                overflow: hidden;
+            }
+            .car-name {
+                font-size: 14px;
+                font-weight: bold;
+                width: auto;
+                position: absolute;
+                left: 85%;
+                top: -20px;
+                background: #fff;
+                padding: 0.5rem 1rem;
+                border-radius: 2rem;
+                border-bottom-left-radius: 0rem;
+                border: 1px solid #ccc;
+                min-width: fit-content;
+                box-sizing: border-box;
+                // -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.25);
+                // -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.25);
+                // box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.25);
+                span {
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: #797979;
+                }
+            }
         }
         &:nth-child(1) {
             border-top-left-radius: 0px;
@@ -123,9 +151,9 @@ $lineHeight :200px;
             }
             .char-img {
                 border-radius: $lineHeightMob;
-                margin: 25px;
-                width: ($lineHeightMob - 50);
-                height: ($lineHeightMob - 50);
+                margin: 5px;
+                width: ($lineHeightMob - 10);
+                height: ($lineHeightMob - 10);
                 background-color: #fff;
             }
             &:nth-child(1) {

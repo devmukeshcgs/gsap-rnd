@@ -1,5 +1,8 @@
     main {
         margin-top: 76px;
+        @media only screen and (max-width: $mobile-width) {
+            margin-top: 0px;
+        }
     }
     
     .container {
