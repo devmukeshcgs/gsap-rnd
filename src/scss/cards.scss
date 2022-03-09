@@ -9,10 +9,17 @@
     .card {
         flex: 1;
         margin: 0 0.5rem;
-        border-radius: 1rem;
-        padding: 1.5rem 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        box-sizing: content-box;
+        border-radius: 2rem;
+        .cont {
+            border-radius: 1.75rem;
+            background-color: #ffffff;
+            padding: 1rem;
+        }
         &:nth-child(1) {
-            // background-color: #ffc200;
+            background-color: #ffc200;
             margin-left: 0;
             background: rgb(255, 194, 0);
             background: -moz-linear-gradient(155deg, rgba(255, 194, 0, 1) 0%, rgba(247, 109, 55, 1) 100%);
@@ -39,10 +46,15 @@
             background: linear-gradient(155deg, rgba(206, 36, 61, 1) 0%, rgba(157, 13, 34, 1) 100%);
         }
         .img {
-            margin-bottom: 1.5rem;
+            display: block;
+            margin-bottom: 2rem;
+            border-radius: 100%;
+            width: 120px;
+            margin: 0 auto;
+            overflow: hidden;
         }
         p {
-            color: #ffffff;
+            color: #252525;
         }
         .cta {
             width: 100%;
