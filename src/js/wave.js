@@ -269,7 +269,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     window.onload = function() {
 
-        console.log("wavify", wavify);
+        // console.log("wavify", wavify);
         // For Vanilla JavaScript
         var myWave = wavify(document.querySelector('#feel-the-wave'), {
             height: 20,

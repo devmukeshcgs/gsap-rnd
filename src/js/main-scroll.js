@@ -61,7 +61,7 @@ function setupLinks(scroller) {
             linkTargets.forEach((e, i) => linkPositions[i] = e.getBoundingClientRect().top - offset);
         };
 
-    console.log("LINK", linkElements);
+    // console.log("LINK", linkElements);
     linkElements.forEach((element, i) => {
 
         element.addEventListener("click", e => {

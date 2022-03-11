@@ -111,4 +111,9 @@
              padding: 0.25rem;
          }
      }
+     &.link {
+         background: transparent;
+         border: 0px;
+         color: $orange;
+     }
  }

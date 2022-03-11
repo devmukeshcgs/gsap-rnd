@@ -13,13 +13,17 @@
 </head>
 
 <body>
+
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="./images/logo.svg" width="120" alt="">
+            <div class="menu-btn">
+                <img src="./images/menu.svg" alt="">
             </div>
-            <nav>
-                <ul class="nav">
+            <div class="logo">
+                <img src="./images/logo.svg" width="150" alt="">
+            </div>
+            <nav class="main-menu">
+                <ul class="nav ">
                     <li>
                         <a href="#sec1">About</a>
                     </li>
@@ -35,8 +39,13 @@
                 </ul>
                 <ul>
                     <li>
-                        <button class="btn capsule">
+                        <button class="btn capsule login-btn">
                             <span class="btn-lable"> Login</span>
+                    </button>
+                        <button class="btn capsule logout-btn">
+                            <span class="btn-lable"> Logout</span>
+                            <span class="username"></span>
+                            <span class="profile-pic"> <img src="./images/dewey.jpg" width="40" alt=""  ></span>
                     </button>
                     </li>
                 </ul>
@@ -45,16 +54,12 @@
 
     </header>
 
-    <!-- 
-    <div id="viewport">
+    <!-- <div id="viewport">
         <div id="scroll-container">
-      
           <div id="box1" class="box box-a">a</div>
           <div id="box2" class="box box-b">b</div>
           <div id="box3" class="box box-c">c</div>
-      
           <div class="line"></div>
-      
           <header>
             <a href="https://greensock.com/scrolltrigger">
               <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/greensock-logo-icon.svg" width="85" />
@@ -63,49 +68,77 @@
           </header>
         </div>
       </div> -->
+
+    <div class="login-rigester">
+        <div id="register" class="register">
+            <form action="" id="register-form">
+                <input id="name" name="name" type="text" placeholder="Name" />
+                <input id="email" name="email" type="text" placeholder="Email" />
+                <input id="mobile" name="mobile" type="text" placeholder="mobile" />
+                <input id="password" name="password" type="password" placeholder="password" />
+                <div class="btn-holder">
+                    <input class="inp-sub" type="submit" value="Sign Up" />
+                </div>
+            </form>
+            <br/>
+            <p>Already have account? <button class="btn link">Login</button></p>
+        </div>
+        <div id="login" class="login">
+            <form action="" id="login-form">
+                <input id="l_name" name="l_name" type="text" placeholder="Name" value="Nilesh" />
+                <input id="customSwitch" type="checkbox" name="keepLoggedIn">
+                <input id="l_password" name="l_password" type="password" placeholder="password" value="nil" />
+                <div class="btn-holder">
+                    <input class="inp-sub" type="submit" value="Sign In" />
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div id="viewport">
         <div id="scroll-container">
             <main>
                 <section id="sec0" class="full no-pad">
-                    <div class="line-row">
-                        <div class="line mid right"></div>
-                        <div class="line">
+                    <div class="banner">
+                        <div class="line-row">
+                            <div class="line mid right"></div>
+                            <div class="line hide-mid">
+                            </div>
+                            <div class="line small left">
+                                <div class="char-img ">
+                                    <img src="./images/huey.jpg" alt="">
+                                    <span class="char-name">Ollu <span>- the Owl</span></span>
+                                </div>
+                            </div>
+                            <div class="line large"></div>
+                            <div class="line mid left"></div>
                         </div>
-                        <div class="line small left">
-                            <div class="char-img ">
-                                <img src="./images/huey.jpg" alt="">
-                                <span class="car-name">Ollu <span>- the Owl</span></span>
+                        <div class="line-row">
+                            <div class="line"></div>
+                            <div class="line large"></div>
+                            <div class="line mid"></div>
+                            <div class="line small hide-mid"></div>
+                            <div class="line large left">
+                                <div class="char-img">
+                                    <img src="./images/dewey.jpg" alt="">
+                                    <span class="char-name left">Weenu <span>- the whale</span></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="line large"></div>
-                        <div class="line mid left"></div>
-                    </div>
-                    <div class="line-row">
-                        <div class="line"></div>
-                        <div class="line large"></div>
-                        <div class="line mid"></div>
-                        <div class="line small"></div>
-                        <div class="line large left">
-                            <div class="char-img">
-                                <img src="./images/dewey.jpg" alt="">
-                                <span class="car-name">Weenu <span>- the whale</span></span>
+                        <div class="line-row">
+                            <div class="line"></div>
+                            <div class="line">
+                                <div class="char-img">
+                                    <img src="./images/louie.jpg" alt="">
+                                    <span class="char-name">Teena <span>- the tiger</span></span>
+                                </div>
                             </div>
+                            <div class="line large"></div>
+                            <!-- <div class="line mid"></div> -->
+                            <div class="line small"></div>
+                            <div class="line small"></div>
                         </div>
-                    </div>
-                    <div class="line-row">
-                        <div class="line"></div>
-                        <div class="line">
-                            <div class="char-img">
-                                <img src="./images/louie.jpg" alt="">
-                                <span class="car-name">Teena <span>- the tiger</span></span>
-                            </div>
-                        </div>
-                        <div class="line large"></div>
-                        <!-- <div class="line mid"></div> -->
-                        <div class="line small"></div>
-                        <div class="line small"></div>
-                    </div>
-                    <!-- <div class="line-row">
+                        <!-- <div class="line-row">
                         <div class="line mid"></div>
                         <div class="line"></div>
                         <div class="line small"></div>
@@ -114,21 +147,37 @@
                         </div>
                         <div class="line mid"></div>
                     </div> -->
+                    </div>
                 </section>
 
-                <section id="sec1">
-                    <h1>Heading</h1>
-                    <h2>Heading</h2>
-                    <h3>Heading</h3>
-                    <h4>Heading</h4>
-                    <h5>Heading</h5>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur quasi
-                        ullam!
-                    </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur quasi
-                        ullam!
-                    </p>
+                <section id="sec6">
+                    <div class="ver-capsul"></div>
                 </section>
+
+                <section id="sec1" class="full no-pad">
+                    <div class="game-display-mob">
+                        <div class="game-info">
+                            <h1>Heading</h1>
+                            <h2>Heading</h2>
+                            <h3>Heading</h3>
+                            <h4>Heading</h4>
+                            <h5>Heading</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
+                                quasi ullam!
+                            </p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
+                                quasi ullam!
+                            </p>
+                        </div>
+                        <div class="mob-frame">
+                            <div class="img-holder">
+                                <img src="./images/mobile-mockup.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
                 <section id="sec2">
                     <h1>Buttons</h1>
                     <a href="#">Link</a><br/>
@@ -141,6 +190,7 @@
                         <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
                     </button>
                 </section>
+
                 <section id="sec3">
                     <div class="cards">
                         <div class="card">
@@ -191,8 +241,8 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
+
                 <section id="sec4" class="full">
                     <div style="position: relative;">
                         <div class="section-wave-container top">
@@ -211,6 +261,7 @@
                         </div>
                     </div>
                 </section>
+
                 <section id="sec5">
                     <div class="cards one-two">
                         <div class="card">
@@ -241,6 +292,7 @@
             <footer></footer>
         </div>
     </div>
+
 </body>
 
 </html>

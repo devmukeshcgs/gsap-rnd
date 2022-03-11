@@ -74,10 +74,12 @@
     "target": "web",
     "dependencies": {
         "ejs-webpack-loader": "^2.2.2",
+        "firebase": "^9.6.8",
         "gsap": "^3.9.1",
         "handlebars": "^4.7.7",
         "imagesloaded": "^4.1.4",
         "jquery": "^3.6.0",
+        "jquery-validation": "^1.19.3",
         "rive-js": "0.7.16",
         "scrollmagic": "^2.0.8",
         "smooth-scrollbar": "^8.7.4",

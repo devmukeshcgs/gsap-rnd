@@ -4,6 +4,8 @@ import html from "../about.html";
 
 /* Demo JS */
 import './demo.js';
+import './firebase.js';
+import './header.js';
 import './main-scroll.js';
 import './banner.js';
 import './wave.js';
