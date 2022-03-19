@@ -45,3 +45,44 @@
         overflow: hidden;
         width: 100%;
     }
+    
+    .crl {
+        padding: 3rem;
+        padding-left: 0px;
+        box-sizing: border-box;
+        &.c0 {
+            background: #ce243d;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        &.c1 {
+            background: #00ade8;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        &.c2 {
+            background: #f76d37;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        &.c3 {
+            background: #ffc200;
+            height: 100%;
+            width: 100%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        &.c4 {
+            background: #00ade8;
+            height: 100vh;
+            width: 100vh;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+    }

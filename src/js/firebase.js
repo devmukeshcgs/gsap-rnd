@@ -107,7 +107,7 @@ window.addEventListener('load', (event) => {
     if (!isLoggedIn) {
         $('.login-btn').show();
         $('.logout-btn').hide();
-        $('.login').hide();
+        // $('.login').hide();
     } else {
         let user = JSON.parse(currentUser)
         $('.logout-btn').show();
