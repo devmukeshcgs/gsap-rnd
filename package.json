@@ -83,6 +83,7 @@
         "rive-js": "0.7.16",
         "scrollmagic": "^2.0.8",
         "smooth-scrollbar": "^8.7.4",
+        "swiper": "^8.0.7",
         "verge": "^1.10.2",
         "wavify": "^1.0.0"
     }

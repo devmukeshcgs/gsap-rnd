@@ -10,11 +10,37 @@
  }
  
  h1 {
-     font-size: 60px;
+     //  font-size: 60px;
+     font-size: 3rem;
+     &.center {
+         text-align: center;
+     }
+     span {
+         &.light {
+             font-weight: normal;
+         }
+         &.red {
+             color: #e24343;
+         }
+         &.purple {
+             color: #c243e2;
+         }
+         &.green {
+             color: #78e243;
+         }
+     }
  }
  
  h2 {
-     font-size: 48px;
+     //  font-size: 48px;
+     font-size: 2.5rem;
+     &.center {
+         text-align: center;
+     }
+     &.subtitle {
+         font-weight: normal;
+         color: #5a5a5a;
+     }
  }
  
  h3 {
@@ -115,5 +141,14 @@
          background: transparent;
          border: 0px;
          color: $orange;
+     }
+     &.ollu-btn {
+         background-color: #421e7f;
+     }
+     &.teena-btn {
+         background-color: #683700;
+     }
+     &.weenu-btn {
+         background-color: #003b63;
      }
  }

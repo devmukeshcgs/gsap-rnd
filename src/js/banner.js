@@ -91,7 +91,9 @@ $(function() {
     ];
 
     let currentIndex = 0;
-    test_array.forEach(function() {})
+
+    test_array.forEach(function() {});
+
     setInterval(() => {
         // if (currentIndex >= test_array.length) {
         //     currentIndex = 0

@@ -54,7 +54,8 @@ module.exports = {
                     },
                 },
                 generator: {
-                    filename: 'images/design/[name].[hash:6][ext]',
+                    // filename: 'images/design/[name].[hash:6][ext]',
+                    filename: 'images/design/[name].[ext]',
                 },
             },
             {

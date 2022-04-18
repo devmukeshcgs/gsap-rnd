@@ -1,9 +1,8 @@
 header {
     // display: none;
-    // background: rgb(143, 255, 39);
+    background: rgb(143, 255, 39);
     // -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
     // -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
-    // box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
     // border-bottom: 1px solid #fff;
     // -webkit-backdrop-filter: blur(20px);
     // backdrop-filter: blur(20px);
@@ -15,6 +14,11 @@ header {
     left: 0;
     right: 0;
     min-height: 50px;
+    &.active {
+        background: #ffffff;
+        box-shadow: 0px 0px 5px 0px #ccc;
+        position: fixed;
+    }
     .container {
         width: 100%;
         display: flex;
@@ -46,13 +50,13 @@ header {
         justify-content: center;
         margin: 0px 1rem;
         z-index: 1;
-        background: rgb(255, 255, 255);
         position: absolute;
-        -webkit-box-shadow: 0px 0px 13px 0px #bebebe;
-        -moz-box-shadow: 0px 0px 13px 0px #bebebe;
-        box-shadow: 0px 0px 13px 0px #bebebe;
-        padding: 0 2rem 1rem;
-        height: 125px;
+        // background: rgb(255, 255, 255);
+        // -webkit-box-shadow: 0px 0px 13px 0px #bebebe;
+        // -moz-box-shadow: 0px 0px 13px 0px #bebebe;
+        // box-shadow: 0px 0px 13px 0px #bebebe;
+        // padding: 0 2rem 1rem;
+        // height: 125px;
         border-bottom-left-radius: 150px;
         border-bottom-right-radius: 150px;
         left: 0;
@@ -66,14 +70,20 @@ header {
         ul {
             display: flex;
             li {
-                margin-left: 2rem;
+                margin-left: 0.5rem;
+                &.active {
+                    a {
+                        border-bottom: 2px solid #ffc200;
+                        font-weight: bold;
+                    }
+                }
                 a {
                     display: block;
                     padding: 0.5rem;
-                    font-family: 'DINP-R';
                     color: #383838;
                     text-transform: uppercase;
-                    font-weight: bold;
+                    font-size: 14px;
+                    letter-spacing: 1px;
                 }
                 button {
                     display: flex;
@@ -139,6 +149,7 @@ header {
 
 @media only screen and (max-width: $mobile-width) {
     header {
+        position: relative;
         .menu-btn {
             display: block;
             height: 75px;
@@ -162,17 +173,18 @@ header {
             flex-direction: column;
             background: rgb(255, 255, 255);
             nav {
-                // display: none;
+                display: none;
                 // for animation
                 margin: 0px;
-                opacity: 0;
+                opacity: 1;
                 background: #fff;
-                position: absolute;
+                position: relative;
                 width: 100%;
                 top: 0;
                 left: 0;
                 right: 0px;
-                z-index: -1;
+                bottom: 0;
+                // z-index: 9999;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -183,5 +195,157 @@ header {
                 }
             }
         }
+    }
+}
+
+.brand {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--color-green-300);
+}
+
+// Header
+.header {
+    position: fixed;
+    background-color: #00ade8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-medium);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    width: 100%;
+    height: 4rem;
+    margin: 0 auto;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    z-index: 10;
+    overflow-y: auto;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-medium);
+    transition: all 0.45s ease-in-out;
+    &.is-active {
+        top: 0;
+        left: 0;
+    }
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.25rem;
+        margin: 1.25rem;
+    }
+    &-link {
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: var(--color-black);
+        transition: all 0.3s ease;
+    }
+    &-block {
+        display: inline-block;
+        font-family: inherit;
+        font-size: var(--display-100);
+        font-weight: 500;
+        line-height: 1.25;
+        user-select: none;
+        text-align: center;
+        white-space: nowrap;
+        margin-left: auto;
+        padding: 0.65rem 1.35rem;
+        border-radius: 3rem;
+        color: var(--color-white);
+        background-color: var(--color-green-300);
+        box-shadow: var(--shadow-medium);
+        transition: all 0.3s ease-in-out;
+    }
+    // Responsive Media Query
+    @media only screen and (min-width: 48rem) {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        background: none;
+        box-shadow: none;
+        background-color: #ce243d;
+        &-inner {
+            display: flex;
+            flex-direction: row;
+            column-gap: 1.75rem;
+            margin: 0 auto;
+        }
+        &-link {
+            text-transform: capitalize;
+        }
+        &-block {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    order: -1;
+    width: 1.75rem;
+    height: auto;
+    border: none;
+    outline: none;
+    visibility: visible;
+    &-line {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        height: 2px;
+        margin: 6px auto;
+        transform: rotate(0deg);
+        background-color: var(--color-black);
+        transition: all 0.3s ease-in-out;
+    }
+    @media only screen and (min-width: 48rem) {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.65);
+    transition: all 0.3s ease-in-out;
+    &.is-active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }

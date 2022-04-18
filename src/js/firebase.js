@@ -100,7 +100,6 @@ window.addEventListener('load', (event) => {
         console.log("USER NOT NULL", );
         isLoggedIn = true;
         // $('.register').hide();
-        // 
         // $('.logout-btn').show();
     }
 

@@ -14,6 +14,16 @@ $(function() {
     var tl = gsap.timeline({ paused: true });
     var tl_Desk = gsap.timeline();
 
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop() > 50) {
+            $("header").addClass("active");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+            $("header").removeClass("active");
+        }
+    });
+
+
     if (window.innerWidth < 480) {
         tl.to(menu, {
             duration: 1,
@@ -41,7 +51,34 @@ $(function() {
     tl.reverse();
 
     ham.addEventListener('click', () => {
-        tl.reversed(!tl.reversed());
+        // tl.reversed(!tl.reversed());
     });
 
+
 })
+
+const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const bgOverlay = document.querySelector(".overlay");
+
+// Show Menu when Click the Burger
+// Hide Menu when Click the Overlay
+if (burgerMenu && navbarMenu && bgOverlay) {
+    burgerMenu.addEventListener("click", () => {
+        navbarMenu.classList.toggle("is-active");
+        bgOverlay.classList.toggle("is-active");
+    });
+
+    bgOverlay.addEventListener("click", () => {
+        navbarMenu.classList.toggle("is-active");
+        bgOverlay.classList.toggle("is-active");
+    });
+}
+
+// Hide Menu when Click the Links
+// document.querySelectorAll(".menu-link").forEach((link) => {
+//     link.addEventListener("click", () => {
+//         navbarMenu.classList.remove("is-active");
+//         bgOverlay.classList.remove("is-active");
+//     });
+// });

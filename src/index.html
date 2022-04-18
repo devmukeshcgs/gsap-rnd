@@ -8,13 +8,41 @@
     <title>gsap rnd</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script> -->
 </head>
 
 <body>
-
-    <header>
+    <div class='loader df aic jcc'>
+        <div>
+            <h1>Loading</h1>
+            <h2 class='loader--text'>0%</h2>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="./index.html" class="brand">Brand</a>
+                <div class="burger" id="burger">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </div>
+                <span class="overlay"></span>
+                <div class="menu" id="menu">
+                    <ul class="menu-inner">
+                        <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">About</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Service</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Project</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Support</a></li>
+                    </ul>
+                </div>
+                <a href="./index.html" class="menu-block">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- <header>
         <div class="container">
             <div class="menu-btn">
                 <img src="./images/menu.svg" alt="">
@@ -24,17 +52,26 @@
             </div>
             <nav class="main-menu">
                 <ul class="nav ">
-                    <li>
-                        <a href="#sec1">About</a>
+                    <li class="active">
+                        <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="#sec2">Features</a>
+                        <a href="#features">About</a>
                     </li>
                     <li>
-                        <a href="#sec3">Purches</a>
+                        <a href="#product">Product</a>
                     </li>
                     <li>
-                        <a href="#sec4">Waves</a>
+                        <a href="#kit">KIT</a>
+                    </li>
+                    <li>
+                        <a href="#careers">Careers</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Blog</a>
                     </li>
                 </ul>
                 <ul>
@@ -45,13 +82,13 @@
                         <button class="btn capsule logout-btn">
                             <span class="btn-lable"> Logout</span>
                             <span class="username"></span>
-                            <span class="profile-pic"> <img src="./images/dewey.jpg" width="40" alt=""  ></span>
+                            <span class="profile-pic"> <img src="./images/mascot/mascot-01.png" width="40" alt=""  ></span>
                     </button>
                     </li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
 
     <!-- <div id="viewport">
         <div id="scroll-container">
@@ -80,7 +117,9 @@
                 </div>
             </form>
             <br/>
-            <p>Already have account? <button class="btn link">Login</button></p>
+            <div class="already-have-ac">
+                <p>Already have account? <button class="btn link">Login</button></p>
+            </div>
         </div>
         <div id="login" class="login">
             <form action="" id="login-form">
@@ -97,6 +136,21 @@
     <div id="viewport">
         <div id="scroll-container">
             <main>
+
+                <section id="" class="full no-pad">
+                    <div class="hero-banner">
+                        <div class="text">
+                            <h1>Welcome To <span> Leapbridge</span></h1>
+                            <h3>The playful place to learn</h3>
+                            <div class="stores">
+                                <a href=""><img width="150" src="./images/app-store.png" alt=""></a>
+                                <a href=""><img width="150" src="./images/play-store.png" alt=""></a>
+                                <a href=""><img width="150" src="./images/buy-kit.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="sec0" class="full no-pad">
                     <div class="banner">
                         <div class="line-row">
@@ -105,7 +159,7 @@
                             </div>
                             <div class="line small left">
                                 <div class="char-img ">
-                                    <img src="./images/huey.jpg" alt="">
+                                    <img src="./images/mascot/mascot-04.png" alt="">
                                     <span class="char-name">Ollu <span>- the Owl</span></span>
                                 </div>
                             </div>
@@ -119,7 +173,7 @@
                             <div class="line small hide-mid"></div>
                             <div class="line large left">
                                 <div class="char-img">
-                                    <img src="./images/dewey.jpg" alt="">
+                                    <img src="./images/mascot/mascot-05.png" alt="">
                                     <span class="char-name left">Weenu <span>- the whale</span></span>
                                 </div>
                             </div>
@@ -128,7 +182,7 @@
                             <div class="line"></div>
                             <div class="line">
                                 <div class="char-img">
-                                    <img src="./images/louie.jpg" alt="">
+                                    <img src="./images/mascot/mascot-01.png" alt="">
                                     <span class="char-name">Teena <span>- the tiger</span></span>
                                 </div>
                             </div>
@@ -149,42 +203,421 @@
                     </div>
                 </section>
 
-                <section id="sec6">
-                    <div class="crl c4">
-                        <div class="crl c3">
-                            <div class="crl c2">
-                                <div class="crl c1">
-                                    <div class="crl c0"></div>
+
+
+                <section class="auto-height">
+                    <h1 class="center">WE ARE NOT KIDDING!</h1>
+                    <h2 class="center subtitle">All the pre-school essentials in one app! </h2>
+                    <div class="essentials-slider">
+                        <div class="swiper-container essentials-slider-container">
+                            <div class="swiper-wrapper essentials-wrapper ">
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"> </div>
+                            <div class="swiper-button-next"> </div>
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </section>
+                <section class="auto-height">
+                    <h1 class="center"><span class="red">Smart</span>, <span class="purple">Curious</span> and <span class="green">Friendly</span>, </br> Leapbridge learning buddies are here</br> to help children study.</h1>
+                </section>
+
+                <section>
+                    <h1 class="center">Play And Learn</h1>
+                    <h2 class="center subtitle">From the ages of 0 to 8, children learn best by playing. So, we gamified our lessons and made them fun for everyone.</h2>
+                </section>
+
+                <section class="full no-pad">
+                    <div class="intro-slider">
+                        <div class="swiper-container intro-slider-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="img">
+                                            <img class="thumb" src="./images/mascot/mascot-01.png">
+                                        </div>
+                                        <div class="text">
+                                            <h1>Miroo The Meerkat</h1>
+                                            <p>
+                                                This little Octopus loves to create, Okko teaches us sometimes we need to be calm and wait. Why did they invent socks? Were they thinking outside the shoe box? Okko knows that the solution to a complexity, Can usually be found if you think creatively!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="img">
+                                            <img class="thumb" src="./images/mascot/mascot-02.png">
+                                        </div>
+                                        <div class="text">
+                                            <h1>Feego The Flamingo
+                                            </h1>
+                                            <p>
+                                                This little Octopus loves to create, Okko teaches us sometimes we need to be calm and wait. Why did they invent socks? Were they thinking outside the shoe box? Okko knows that the solution to a complexity, Can usually be found if you think creatively!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <div class="img">
+                                            <img class="thumb" src="./images/mascot/mascot-03.png">
+                                        </div>
+                                        <div class="text">
+                                            <h1>Oluu The Owl</h1>
+                                            <p>
+                                                This little Octopus loves to create, Okko teaches us sometimes we need to be calm and wait. Why did they invent socks? Were they thinking outside the shoe box? Okko knows that the solution to a complexity, Can usually be found if you think creatively!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <!-- <div class="swiper-button-prev">PREV</div> -->
+                            <!-- <div class="swiper-button-next">NEXT</div> -->
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="full no-pad">
+                    <div class="container">
+                        <div class="parallelogram-shape"> </div>
+                        <div class="parallelogram-box hero-bg">
+
+                            <h1 class="center">Features</h1>
+                            <div class="pills">
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">01</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        1000+ <br/> Games
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">02</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Experts<br/> instruction
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">03</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Lifetime <br/> access
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pills">
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">04</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Offline play
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">05</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Screen sharing
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">06</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Ads Free
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">07</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        Parental control
+                                    </div>
+                                </div>
+                                <div class="pill">
+                                    <div class="count">
+                                        <div class="index">08</div>
+                                        <span></span>
+                                    </div>
+                                    <div class="text">
+                                        AR Activity
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="sec1" class="full no-pad">
-                    <div class="game-display-mob">
-                        <div class="game-info">
-                            <h1>Heading</h1>
-                            <h2>Heading</h2>
-                            <h3>Heading</h3>
-                            <h4>Heading</h4>
-                            <h5>Heading</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
-                        </div>
-                        <div class="mob-frame">
-                            <div class="img-holder">
-                                <img src="./images/mobile-mockup.png" alt="">
+                <section id="register-sec">
+                    <div class="register-div">
+                        <form action="">
+                            <input id="name" name="name" type="text" placeholder="Name" />
+                            <input id="email" name="email" type="text" placeholder="Email" />
+                            <input id="mobile" name="mobile" type="text" placeholder="mobile" />
+                            <input id="password" name="password" type="password" placeholder="password" />
+                            <div class="btn-holder">
+                                <input class="inp-sub" type="submit" value="Sign Up" />
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+
+                <section id="about" class="">
+                    <div class="about-bg">
+                        <div class="container">
+                            <div class="wrapper">
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-04.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h1>Ollu - <span> the Owl</span></h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste nobis dolorum accusantium explicabo repellat, non consequuntur cupiditate maxime laborum nostrum, vero distinctio molestiae officia, ipsum ea sapiente?
+                                        Consectetur, excepturi.
+                                    </p>
+                                    <div class="cta">
+                                        <button class="btn capsule ollu-btn">View Games</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="about-bg teena">
+                        <div class="container">
+                            <div class="wrapper">
+                                <div class="text">
+                                    <h1>Teena - <span> the Tiger</span></h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste nobis dolorum accusantium explicabo repellat, non consequuntur cupiditate maxime laborum nostrum, vero distinctio molestiae officia, ipsum ea sapiente?
+                                        Consectetur, excepturi.
+                                    </p>
+                                    <div class="cta">
+                                        <button class="btn capsule teena-btn">View Games</button>
+                                    </div>
+                                </div>
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-01.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-bg weenu">
+                        <div class="container">
+                            <div class="wrapper">
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-05.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h1>Ollu - <span> the Owl</span></h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste nobis dolorum accusantium explicabo repellat, non consequuntur cupiditate maxime laborum nostrum, vero distinctio molestiae officia, ipsum ea sapiente?
+                                        Consectetur, excepturi.
+                                    </p>
+                                    <div class="cta">
+                                        <button class="btn capsule ollu-btn">View Games</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
+                <section id="features" class="full no-pad">
+                    <div id="h-scroll" class="boxy-wrapper">
+                        <div class="boxy c1">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-03.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy c2">
+                            <div class="name">Creative thinking</div>
+                        </div>
+
+                        <div class="boxy c9">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy c8">
+                            <div class="name">Language</div>
+                        </div>
+                        <div class="boxy c7">
+                            <div class="subname">The Tiger</div>
+                        </div>
+                        <div class="boxy c6">
+                            <div class="name">Math</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-05.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Social Emotation</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Feego</div>
+                            <div class="subname">The Flemingo</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-06.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="h-scroll2" class="boxy-wrapper">
+                        <div class="boxy c9">01</div>
+                        <div class="boxy c6">
+                            <div class="name">Math</div>
+                        </div>
+                        <div class="boxy c7">
+                            <div class="name">Teena</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-02.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy c3">
+                            <div class="name">Social Emotation</div>
+                        </div>
+                        <div class="boxy c4">
+                            <div class="name">Math</div>
+                        </div>
+                        <div class="boxy c9">
+                            <div class="name">Oluu</div>
+                            <div class="subname">The Octopus</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-02.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">07</div>
+                        <div class="boxy">
+                            <div class="name">Language</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Social Emotation</div>
+                        </div>
+                    </div>
+                    <!-- <div id="h-scroll" class="boxy-wrapper">
+                        <div class="boxy">
+                            <div class="name">Language</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Language</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-03.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Math</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Creative Thinking</div>
+                        </div>
+                        <div class="boxy">06</div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-05.png" alt="">
+                            </div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Language</div>
+                        </div>
+                        <div class="boxy">
+                            <div class="name">Meenu</div>
+                            <div class="subname">The Tiger</div>
+                            <div class="mascot">
+                                <img src="./images/mascot/mascot-06.png" alt="">
+                            </div>
+                        </div>
+                    </div> -->
+                </section>
+
+                <section>
+                    <div class="my-slider">
+                        <div class="swiper-container slider-one ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="img">
+                                        <img class="thumb" src="./images/mascot/mascot-01.png">
+                                    </div>
+                                    <div class="text">Heading01</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img">
+                                        <img class="thumb" src="./images/mascot/mascot-02.png">
+                                    </div>
+                                    <div class="text">Heading02</div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="img">
+                                        <img class="thumb" src="./images/mascot/mascot-03.png">
+                                    </div>
+                                    <div class="text">Heading03</div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"> </div>
+                            <div class="swiper-button-next"> </div>
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </section>
                 <section id="sec2">
                     <h1>Buttons</h1>
                     <a href="#">Link</a><br/>
@@ -193,57 +626,64 @@
                     <button class="btn round">Button</button>
                     <button class="btn capsule">Button</button>
                     <button class="btn capsule icon">
-                        <span class="btn-lable"> Button</span>
-                        <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                    </button>
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                            </button>
                 </section>
 
-                <section id="sec3">
-                    <div class="cards">
-                        <div class="card">
-                            <div class="cont">
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/huey.jpg " alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
+                <section id="sec3" class="cards-bg full">
+                    <div class="container">
+                        <div class="parallelogram-shape"> </div>
+                        <div class="parallelogram-box">
+                            <div class="bg">
+                                <div class="cards">
+                                    <div class="card">
+                                        <div class="cont">
+                                            <h4>Card Title</h4>
+                                            <div class="img">
+                                                <img src="./images/mascot/mascot-01.png" alt="">
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                            <div class="cta">
+                                                <button class="btn capsule icon">
+                                    <span class="btn-lable"> Button</span>
+                                    <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                                    </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cont">
+
+                                            <h4>Card Title</h4>
+                                            <div class="img">
+                                                <img src="./images/mascot/mascot-02.png" alt="">
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                            <div class="cta">
+                                                <button class="btn capsule icon">
                                 <span class="btn-lable"> Button</span>
                                 <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
+                            </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="cont">
 
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/louie.jpg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
-
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/dewey.jpg" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
+                                            <h4>Card Title</h4>
+                                            <div class="img">
+                                                <img src="./images/mascot/mascot-03.png" alt="">
+                                            </div>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                            <div class="cta">
+                                                <button class="btn capsule icon">
+                                <span class="btn-lable"> Button</span>
+                                <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                            </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -295,11 +735,11 @@
                         </div>
                     </div>
                 </section>
+
             </main>
             <footer></footer>
         </div>
     </div>
-
 </body>
 
 </html>
