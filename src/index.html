@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>gsap rnd</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,9 @@
             <h2 class='loader--text'>0%</h2>
         </div>
     </div>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
+    <header id="header" class="header">
+        <div class="container22">
+            <!-- <nav class="navbar">
                 <a href="./index.html" class="brand">Brand</a>
                 <div class="burger" id="burger">
                     <span class="burger-line"></span>
@@ -39,6 +40,31 @@
                     </ul>
                 </div>
                 <a href="./index.html" class="menu-block">Contact</a>
+            </nav> -->
+            <nav class="navbar">
+                <div class="container">
+                    <div class="wrapper">
+                        <a href="./index.html" class="brand"><img src="./images/logo.svg" class="main-logo" alt=""></a>
+                        <button type="button" class="burger" id="burger">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                            <!-- <img src="./images/menu.svg" class="burger-icon" alt=""> -->
+                        </button>
+                        <div class="menu" id="menu">
+                            <ul class="menu-inner">
+                                <li class="menu-item active"> <a href="/" class="menu-link">Home</a> </li>
+                                <li class="menu-item"> <a href="#features" class="menu-link">About</a> </li>
+                                <li class="menu-item"> <a href="#product" class="menu-link">Product</a> </li>
+                                <li class="menu-item"> <a href="#kit" class="menu-link">KIT</a> </li>
+                                <li class="menu-item"> <a href="#careers" class="menu-link">Careers</a> </li>
+                                <li class="menu-item"> <a href="#contact" class="menu-link">Contact</a> </li>
+                                <li class="menu-item"> <a href="#blog" class="menu-link">Blog</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -136,12 +162,16 @@
     <div id="viewport">
         <div id="scroll-container">
             <main>
-
                 <section id="" class="full no-pad">
                     <div class="hero-banner">
                         <div class="text">
                             <h1>Welcome To <span> Leapbridge</span></h1>
                             <h3>The playful place to learn</h3>
+                            <h1>Coming soon</span>
+                            </h1>
+                            <div class="show-counter">
+                                <div id="counter" class="counter-wrapper"> </div>
+                            </div>
                             <div class="stores">
                                 <a href=""><img width="150" src="./images/app-store.png" alt=""></a>
                                 <a href=""><img width="150" src="./images/play-store.png" alt=""></a>
@@ -203,11 +233,11 @@
                     </div>
                 </section>
 
-
-
                 <section class="auto-height">
-                    <h1 class="center">WE ARE NOT KIDDING!</h1>
-                    <h2 class="center subtitle">All the pre-school essentials in one app! </h2>
+                    <div class="sec-head">
+                        <h1 class="center">WE ARE NOT KIDDING!</h1>
+                        <h2 class="center subtitle">All the pre-school essentials in one app! </h2>
+                    </div>
                     <div class="essentials-slider">
                         <div class="swiper-container essentials-slider-container">
                             <div class="swiper-wrapper essentials-wrapper ">
@@ -223,12 +253,16 @@
                     </div>
                 </section>
                 <section class="auto-height">
-                    <h1 class="center"><span class="red">Smart</span>, <span class="purple">Curious</span> and <span class="green">Friendly</span>, </br> Leapbridge learning buddies are here</br> to help children study.</h1>
+                    <div class="sec-head">
+                        <h1 class="center"><span class="red">Smart</span>, <span class="purple">Curious</span> and <span class="green">Friendly</span>, </br> Leapbridge learning buddies are here</br> to help children study.</h1>
+                    </div>
                 </section>
 
                 <section>
-                    <h1 class="center">Play And Learn</h1>
-                    <h2 class="center subtitle">From the ages of 0 to 8, children learn best by playing. So, we gamified our lessons and made them fun for everyone.</h2>
+                    <div class="sec-head">
+                        <h1 class="center">Play And Learn</h1>
+                        <h2 class="center subtitle">From the ages of 0 to 8, children learn best by playing. So, we gamified our lessons and made them fun for everyone.</h2>
+                    </div>
                 </section>
 
                 <section class="full no-pad">

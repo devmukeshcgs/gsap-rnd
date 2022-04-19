@@ -22,12 +22,23 @@
         &.full {
             max-width: 100%;
             width: 100%;
+            overflow: hidden;
         }
         &.auto-height {
             height: auto;
             min-height: auto;
         }
-        @media only screen and (max-width: $mobile-width) {}
+        .sec-head {
+            margin: 0.5rem 0rem 2rem;
+        }
+        @media only screen and (max-width: 768px) {
+            min-height: auto;
+            padding: 2rem;
+        }
+        @media only screen and (max-width: $mobile-width) {
+            min-height: auto;
+            padding: 1rem;
+        }
     }
     
     .no-pad {
@@ -92,5 +103,17 @@
             width: 100%;
             // border-top-right-radius: 50%;
             // border-bottom-right-radius: 50%;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        html {
+            font-size: 14px;
+        }
+    }
+    
+    @media only screen and (max-width: $mobile-width) {
+        html {
+            font-size: 12px;
         }
     }
