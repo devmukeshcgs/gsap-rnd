@@ -1,0 +1,19 @@
+@use "sass:math";
+@import "./bootstrap-overrides/variables";
+@import "./bootstrap-overrides/typo";
+@import "./bootstrap-overrides/base";
+@import "./bootstrap-overrides/forms";
+//BUTTONS
+@import "./bootstrap-overrides/buttons";
+//SECTIONS
+@import "./bootstrap-overrides/header";
+@import "./bootstrap-overrides/footer";
+@import "./bootstrap-overrides/infoscroll";
+//PAGE
+@import "./bootstrap-overrides/components/home";
+@import "./bootstrap-overrides/components/hero-banner";
+@import "./bootstrap-overrides/components/testimonials";
+@import "./bootstrap-overrides/components/about";
+@import "./bootstrap-overrides/components/career";
+//BOOTSTRAP
+@import "~bootstrap/scss/bootstrap";

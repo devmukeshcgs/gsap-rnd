@@ -1,102 +1,90 @@
-// // typical import
-// import gsap from "gsap";
+var $ = require("jquery");
+window.jQuery = $;
+window.$ = $;
 
-// // // get other plugins:
-// import ScrollTrigger from "gsap/ScrollTrigger";
-// import Flip from "gsap/Flip";
-// import Draggable from "gsap/Draggable";
+import 'bootstrap';
+var homeImg = document.getElementById('logo');
+var footerImg = document.getElementById('footer-logo-strip');
+// import html from "./home.html";
 
-// // or all tools are exported from the "all" file (excluding members-only plugins):
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin, Flip } from "gsap/all";
-// import ScrollMagic from 'scrollmagic'
-// don't forget to register plugins
-gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin);
+(function() {
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+    // var doc = document.documentElement;
+    // var w = window;
 
-// var controller = new ScrollMagic.Controller();
-// var imagesLoaded = require('imagesloaded');
+    // var prevScroll = w.scrollY || doc.scrollTop;
+    // var curScroll;
+    // var direction = 0;
+    // var prevDirection = 0;
 
-// const images = gsap.utils.toArray('.boxy');
-// const loader = document.querySelector('.loader--text');
+    // var header = document.getElementById('header');
 
-// const updateProgress = (instance) =>
-//     loader.textContent = `${Math.round(instance.progressedCount * 100 / images.length)}%`;
+    // var checkScroll = function() {
 
-// const showDemo = () => {
-//     document.body.style.overflow = 'auto';
-//     document.scrollingElement.scrollTo(0, 0);
-//     gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
+    //     curScroll = w.scrollY || doc.scrollTop;
+    //     if (curScroll > prevScroll) {
+    //         //scrolled up
+    //         direction = 2;
+    //     } else if (curScroll < prevScroll) {
+    //         //scrolled down
+    //         direction = 1;
+    //     }
 
-//     gsap.utils.toArray('section').forEach((section, index) => {
-//         const w = section.querySelector('.boxy-wrapper');
-//         const [x, xEnd] = (index % 2) ? ['100%', (w.scrollWidth - section.offsetWidth) * -1] : [w.scrollWidth * -1, 0];
-//         gsap.fromTo(w, { x }, {
-//             x: xEnd,
-//             scrollTrigger: {
-//                 trigger: section,
-//                 scrub: 0.5
-//             }
-//         });
-//     });
-// }
+    //     if (direction !== prevDirection) {
+    //         toggleHeader(direction, curScroll);
+    //     }
 
-// imagesLoaded(images).on('progress', updateProgress).on('always', showDemo);
+    //     prevScroll = curScroll;
+    // };
 
-let tl = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-    scrollTrigger: {
-        trigger: "#sec1",
-        start: "-0% 50%",
-        end: "150% 50%",
-        scrub: 0.5,
-        // markers: { startColor: "green", endColor: "red", fontSize: "12px" },
-    }
-});
+    // var toggleHeader = function(direction, curScroll) {
+    //     if (direction === 2 && curScroll > 10) {
+    //         //replace 52 with the height of your header in px
+    //         // header.classList.remove('scroll-down');
+    //         // header.classList.addd('scroll-up');
+    //         header.classList.add('fixed-header');
+    //         prevDirection = direction;
+    //     } else if (direction === 1) {
+    //         // header.classList.remove('scroll-up');
+    //         // header.classList.add('scroll-down');
+    //         header.classList.remove('fixed-header');
+    //         prevDirection = direction;
+    //     }
+    // };
 
-tl.fromTo("#h-scroll", { x: "-30%", }, { x: "0%", });
+    // window.addEventListener('scroll', checkScroll);
 
-let tl2 = gsap.timeline({
-    // yes, we can add it to an entire timeline!
-    scrollTrigger: {
-        trigger: "#sec1",
-        start: "-50% 50%",
-        end: "150% 50%",
-        scrub: 0.5,
-        // markers: { startColor: "green", endColor: "red", fontSize: "12px" },
-    }
-});
+    // COUNTDOWN TIMER
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jun 1, 2022 12:00:00").getTime();
 
-tl2.fromTo("#h-scroll2", { x: "0%", }, { x: "-60%", });
+    // Update the count down every 1 second
+    var x = setInterval(function() {
 
-// add animations and labels to the timeline
-// tl.addLabel("start")
-//     .from(".box p", { scale: 0.3, rotation: 45, autoAlpha: 0 })
-//     .addLabel("color")
-//     .from(".box", { backgroundColor: "#28a92b" })
-//     .addLabel("spin")
-//     .to(".box", { rotation: 360 })
-//     .addLabel("end");
+        // Get today's date and time
+        var now = new Date().getTime();
 
-// ScrollTrigger.create({
-//     trigger: "#h-scroll",
-//     start: "top top",
-//     endTrigger: "#otherID",
-//     end: "bottom 50%+=100px",
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
 
-//     onToggle: self => console.log("toggled, isActive:", self.isActive),
-//     onUpdate: self => {
-//         console.log("progress:", self.progress.toFixed(3), "direction:", self.direction, "velocity", self.getVelocity());
-//     }
-// });
-const loader = document.querySelector('.loader--text');
-const updateProgress = (instance) =>
-    loader.textContent = `${Math.round(instance.progressedCount * 100 / images.length)}%`;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
-    gsap.to(document.querySelector('.loader'), { autoAlpha: 0 });
-    updateProgress
-});
+        // Display the result in the element with id="demo"
+        let timerString = `<div class="countdown"><p>${days}</p><span>Days</span></div>
+        <div class="countdown"><p>${hours}</p><span>Hours</span></div>
+        <div class="countdown"><p>${minutes}</p><span>Mins</span></div>
+        <div class="countdown"><p>${seconds}</p><span>Seconds</span></div>`
+        document.getElementById("counter").innerHTML = timerString;
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("counter").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+})();

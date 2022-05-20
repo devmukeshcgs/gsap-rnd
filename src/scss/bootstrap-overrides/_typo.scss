@@ -1,0 +1,47 @@
+* {
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+p {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    // font-family: 'DINP-R';
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 700;
+    color: $dark-gray;
+    &.center {
+        text-align: center;
+    }
+    span {
+        font-weight: 700;
+    }
+    &.bold {
+        font-weight: 700;
+    }
+}
+
+h1 {
+    margin-bottom: 2rem !important;
+}
+
+a {
+    transition: 0.3s;
+    &:hover {
+        transition: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {}

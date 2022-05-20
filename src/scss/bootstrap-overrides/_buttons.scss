@@ -1,0 +1,13 @@
+.btn {
+    border-radius: 2rem!important;
+    padding: 0.5rem 1rem!important;
+}
+
+.btn-group,
+.btn-group-vertical {
+    border-radius: 2rem!important;
+    overflow: hidden;
+    .btn {
+        border-radius: 0!important;
+    }
+}

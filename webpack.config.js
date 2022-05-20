@@ -8,7 +8,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 const environment = require('./configuration/environment');
 
@@ -21,6 +23,7 @@ const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin(
     filename: template,
     template: path.resolve(environment.paths.source, template),
     favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+    title: "Leapbridge by Navneet",
 }));
 
 module.exports = {
@@ -55,7 +58,7 @@ module.exports = {
                 },
                 generator: {
                     // filename: 'images/design/[name].[hash:6][ext]',
-                    filename: 'images/design/[name].[ext]',
+                    filename: 'images/[name].[ext]',
                 },
             },
             {
@@ -70,33 +73,58 @@ module.exports = {
                     filename: 'images/design/[name].[hash:6][ext]',
                 },
             },
+            {
+                test: /\.jpg$/,
+                loader: "file-loader"
+            },
+            {
+                test: /\.csv$/,
+                loader: 'csv-loader',
+                options: {
+                    dynamicTyping: true,
+                    header: true,
+                    skipEmptyLines: true
+                }
+            },
+            {
+                test: /\.(txt|csv|mmdb)$/,
+                use: [{
+                    loader: 'file-loader',
+                }, ],
+            },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
         }),
-        new ImageMinimizerPlugin({
-            test: /\.(jpe?g|png|gif|svg)$/i,
-            minimizerOptions: {
-                // Lossless optimization with custom option
-                // Feel free to experiment with options for better result for you
-                plugins: [
-                    ['gifsicle', { interlaced: true }],
-                    ['jpegtran', { progressive: true }],
-                    ['optipng', { optimizationLevel: 5 }],
-                    [
-                        'svgo',
-                        {
-                            plugins: [{
-                                name: 'removeViewBox',
-                                active: false,
-                            }, ],
-                        },
-                    ],
-                ],
-            },
-        }),
+        // new ImageMinimizerPlugin({
+        //     test: /\.(jpe?g|png|gif|svg)$/i,
+        //     minimizerOptions: {
+        //         // Lossless optimization with custom option
+        //         // Feel free to experiment with options for better result for you
+        //         plugins: [
+        //             ['gifsicle', {
+        //                 interlaced: true
+        //             }],
+        //             ['jpegtran', {
+        //                 progressive: true
+        //             }],
+        //             ['optipng', {
+        //                 optimizationLevel: 5
+        //             }],
+        //             [
+        //                 'svgo',
+        //                 {
+        //                     plugins: [{
+        //                         name: 'removeViewBox',
+        //                         active: false,
+        //                     }, ],
+        //                 },
+        //             ],
+        //         ],
+        //     },
+        // }),
         new CleanWebpackPlugin({
             verbose: true,
             cleanOnceBeforeBuildPatterns: ['**/*', '!stats.json'],

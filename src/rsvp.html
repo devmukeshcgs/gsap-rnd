@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsap rnd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+    <!-- <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script> -->
+</head>
+
+<body>
+    <div class='loader df aic jcc'>
+        <div>
+            <h1>Loading</h1>
+            <h2 class='loader--text'>0%</h2>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="menu-btn">
+                <img src="./images/menu.svg" alt="">
+            </div>
+            <div class="logo">
+                <img src="./images/logo.svg" width="150" alt="">
+            </div>
+            <nav class="main-menu">
+                <ul class="nav ">
+                    <li>
+                        <a href="#sec1">About</a>
+                    </li>
+                    <li>
+                        <a href="#sec2">Features</a>
+                    </li>
+                    <li>
+                        <a href="#sec3">Purches</a>
+                    </li>
+                    <li>
+                        <a href="#sec4">Waves</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button class="btn capsule login-btn">
+                            <span class="btn-lable"> Login</span>
+                    </button>
+                        <button class="btn capsule logout-btn">
+                            <span class="btn-lable"> Logout</span>
+                            <span class="username"></span>
+                            <!-- <span class="profile-pic"> <img src="./images/dewey.jpg" width="40" alt=""  ></span> -->
+                    </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="viewport">
+        <div id="scroll-container">
+            <div id="box1" class="box box-a">a</div>
+            <div id="box2" class="box box-b">b</div>
+            <div id="box3" class="box box-c">c</div>
+            <div class="line"></div>
+            <header>
+                <a href="https://greensock.com/scrolltrigger">
+                    <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/greensock-logo-icon.svg" width="85" />
+                    <span class="name">ScrollTrigger</span>
+                </a>
+            </header>
+        </div>
+    </div>
+
+    <div class="login-rigester">
+        <div id="register" class="register">
+            <form action="" id="register-form">
+                <input id="name" name="name" type="text" placeholder="Name" />
+                <input id="email" name="email" type="text" placeholder="Email" />
+                <input id="mobile" name="mobile" type="text" placeholder="mobile" />
+                <input id="password" name="password" type="password" placeholder="password" />
+                <div class="btn-holder">
+                    <input class="inp-sub" type="submit" value="Sign Up" />
+                </div>
+            </form>
+            <br/>
+            <p>Already have account? <button class="btn link">Login</button></p>
+        </div>
+        <div id="login" class="login">
+            <form action="" id="login-form">
+                <input id="l_name" name="l_name" type="text" placeholder="Name" value="Nilesh" />
+                <input id="customSwitch" type="checkbox" name="keepLoggedIn">
+                <input id="l_password" name="l_password" type="password" placeholder="password" value="nil" />
+                <div class="btn-holder">
+                    <input class="inp-sub" type="submit" value="Sign In" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="viewport">
+        <div id="scroll-container">
+            <main>
+                <section id=" " class="full no-pad">
+
+                </section>
+                <section id=" " class="full no-pad">
+
+                    <div class="game-display-mob">
+                        <div class="game-info">
+                            <h1>Heading</h1>
+                            <h2>Heading</h2>
+                            <h3>Heading</h3>
+                            <h4>Heading</h4>
+                            <h5>Heading</h5>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
+                                quasi ullam!
+                            </p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
+                                quasi ullam!
+                            </p>
+                        </div>
+                        <div class="mob-frame">
+                            <div class="img-holder">
+                                <img src="./images/mobile-mockup.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id=" ">
+                    <h1>Buttons</h1>
+                    <a href="#">Link</a><br/>
+                    <button class="btn">Button</button>
+                    <button class="btn outline">Button</button>
+                    <button class="btn round">Button</button>
+                    <button class="btn capsule">Button</button>
+                    <button class="btn capsule icon">
+                        <span class="btn-lable"> Button</span>
+                        <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                    </button>
+                </section>
+
+                <section id=" ">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="cont">
+                                <h4>Card Title</h4>
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-03.png" alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                <div class="cta">
+                                    <button class="btn capsule icon">
+                                <span class="btn-lable"> Button</span>
+                                <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="cont">
+
+                                <h4>Card Title</h4>
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-01.png" alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                <div class="cta">
+                                    <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="cont">
+
+                                <h4>Card Title</h4>
+                                <div class="img">
+                                    <img src="./images/mascot/mascot-02.png" alt="">
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                                <div class="cta">
+                                    <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sec4" class="full">
+                    <div style="position: relative;">
+                        <div class="section-wave-container top">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
+                        </div>
+                        <div class="section-wave-container bottom">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave-two" d=""/></svg>
+                        </div>
+                        <div class="bar">
+                            <div class="div1"></div>
+                            <div class="div2"></div>
+                            <div class="div3"></div>
+                            <div class="div4"></div>
+                            <div class="div5"></div>
+                            <!-- <div class="div6"></div> -->
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sec5">
+                    <div class="cards one-two">
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h4>Card Title</h4>
+                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
+                            <div class="cta">
+                                <button class="btn capsule icon">
+                            <span class="btn-lable"> Button</span>
+                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer></footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
