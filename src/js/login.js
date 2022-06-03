@@ -2,13 +2,13 @@ var $ = require("jquery");
 window.jQuery = $;
 window.$ = $;
 import validate from 'jquery-validation';
-// const URL = "https://qa-api-leapbridge.demotrt.com/v1"; 
-const URL = "https://dev-api-leapbridge.demotrt.com/v1";
+const URL = "https://qa-api-leapbridge.demotrt.com/v1";
+// const URL = "https://dev-api-leapbridge.demotrt.com/v1";
 
 $(function() {
-    $('#submitForm:input[type="submit"]').prop('disabled', true);
+    $('#loginsubmitForm:input[type="submit"]').prop('disabled', true);
 
-    $("#sendOTPBtn").on("click", function(event) {
+    $("#loginsendOTPBtn").on("click", function(event) {
         let val_mobile = $('#mobile').val();
         //console.log("val_mobile", val_mobile);
         $('#mobile').valid();
@@ -19,7 +19,7 @@ $(function() {
                 "phone": "+91" + val_mobile
             },
             success: function(data) {
-                //console.log(data);
+                console.log(data);
                 $('.otp-box').show();
             },
             error: function(jqXHR, textStatus, errorThrown) {
@@ -28,7 +28,7 @@ $(function() {
         });
     });
 
-    $("#verifyOTPBtn").on("click", function(event) {
+    $("#loginverifyOTPBtn").on("click", function(event) {
         let val_mobile = $('#mobile').val();
         let val_otp = $('#otp').val();
         //console.log("val_mobile", val_mobile, val_otp);
@@ -40,8 +40,8 @@ $(function() {
                 "otp": val_otp
             },
             success: function(data) {
-                //console.log(data);
-                // $('#submitForm').attr();
+                console.log(data);
+                // $('#loginsubmitForm').attr();
                 $(':input[type="submit"]').prop('disabled', false);
                 $('.otp-error').text("");
 
@@ -55,17 +55,9 @@ $(function() {
         });
     })
 
-    $("#register-form").validate({
+    $("#login-form").validate({
         rules: {
-            username: {
-                required: true,
-            },
-            email: {
-                required: true,
-            },
-            kidAge: {
-                required: true,
-            },
+
             mobile: {
                 required: true,
             },
@@ -74,15 +66,6 @@ $(function() {
             }
         },
         messages: {
-            username: {
-                required: "Please enter your Name",
-            },
-            email: {
-                required: "Please enter your Email",
-            },
-            kidAge: {
-                required: "Please enter your mobile",
-            },
             mobile: {
                 required: "Please enter your mobile",
             },
@@ -100,19 +83,14 @@ $(function() {
         }
     })
 
-    $("#submitForm").on("click", function(event) {
+    $("#loginsubmitForm").on("click", function(event) {
         event.preventDefault();
         if ($("#register-form").valid()) {
-            let val_username = $('#username').val();
-            let val_email = $('#email').val();
-            let val_kidAge = $('#kidAge').val();
+
             let val_mobile = $('#mobile').val();
             let val_otp = $('#otp').val();
 
             let DATA = {
-                    "username": val_username,
-                    "KidsAge": val_kidAge,
-                    "email": val_email,
                     "phone": "+91" + val_mobile,
                     "otp": val_otp
                 }
@@ -128,9 +106,6 @@ $(function() {
                     $('.thank-you-msg').show();
                     setTimeout(function() {
                         $('.thank-you-msg').hide();
-                        $('#username').val('');
-                        $('#email').val('');
-                        $('#kidAge').val('');
                         $('#mobile').val('');
                         $('#otp').val('');
                     }, 5000);

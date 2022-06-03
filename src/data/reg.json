@@ -1,0 +1,27 @@
+﻿{
+    "LeadDetails": [{
+            "Attribute": "Phone",
+            "Value": "9821672735"
+        },
+        {
+            "Attribute": "EmailAddress",
+            "Value": "anaa@example.com"
+        },
+        {
+            "Attribute": "FirstName",
+            "Value": "Anaa"
+        },
+        {
+            "Attribute": "mx_Gender",
+            "Value": "male"
+        },
+        {
+            "Attribute": "mx_Date_of_Birth",
+            "Value": "06/01/2022"
+        }
+    ],
+    "Activity": {
+        "ActivityEvent": 209,
+        "ActivityNote": "Testing for paylod"
+    }
+}

@@ -69,40 +69,61 @@
         </marquee>
     </div>
 
-    <section class="full no-pad" id="career">
-        <div class="header career-header-bg">
+    <section class="full no-pad" id="job">
+        <div class="header job-header-bg">
             <div class="container">
-                <h1>Careers</h1>
+                <h1>Apply for job</h1>
             </div>
         </div>
-        <div class="container career">
+        <div class="container job">
             <div class="row ">
+                <div class="col-3"></div>
                 <div class="col">
-                    <div class="sec-header">
-
-                        <h1 class="bold">We're looking to improve how children are educated.</h1>
-                        <h3>Excited about how technology can educate kids? We'd like to hear from you!</h3>
+                    <div class="form-heading">
                     </div>
-                    <div id="job-cards" class="job-cards typ-inline">
-
-                    </div>
+                    <form id="apply-job-form">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" id="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" class="form-control" id="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Phone Number</label>
+                            <input type="number" class="form-control" id="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Choose your Position</label>
+                            <select class="form-control" id="position">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="exampleFormControlFile1">Example file input</label> -->
+                            <input type="file" class="form-control-file" id="file">
+                        </div>
+                        <br/>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary" id="submitJobForm">Join Now</button>
+                        </div>
+                    </form>
                 </div>
+                <div class="col-3"></div>
+
             </div>
         </div>
     </section>
-    <section class="full">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="text-center bold">Didn’t find the position you’re looking for? </h1>
-                    <h1 class="text-center bold"> send us your CV</h1>
-                    <div class="text-center">
-                        <button class="btn btn-lg btn-primary">Apply Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <footer>
         <div class="color-stripe">
             <span class="yellow"></span>

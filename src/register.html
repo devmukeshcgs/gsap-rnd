@@ -2,241 +2,499 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gsap rnd</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-    <!-- <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Leapbridge by Navneet</title>
 </head>
 
 <body>
+
     <header>
-        <div class="container">
-            <div class="menu-btn">
-                <img src="./images/menu.svg" alt="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container fluid">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" class="logo" src="./images/logo-only.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">ABOUT</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./products.html">APP</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./careers.html">CAREERS</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                    </ul>
+                    <!-- <div class="login-btn">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LOGIN</a>
+                        </li>
+                    </ul>
+                </div> -->
+                </div>
             </div>
-            <div class="logo">
-                <img src="./images/logo.svg" width="150" alt="">
-            </div>
-            <nav class="main-menu">
-                <ul class="nav ">
-                    <li>
-                        <a href="#sec1">About</a>
-                    </li>
-                    <li>
-                        <a href="#sec2">Features</a>
-                    </li>
-                    <li>
-                        <a href="#sec3">Purches</a>
-                    </li>
-                    <li>
-                        <a href="#sec4">Waves</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button class="btn capsule login-btn">
-                            <span class="btn-lable"> Login</span>
-                    </button>
-                        <button class="btn capsule logout-btn">
-                            <span class="btn-lable"> Logout</span>
-                            <span class="username"></span>
-                            <!-- <span class="profile-pic"> <img src="./images/dewey.jpg" width="40" alt=""  ></span> -->
-                    </button>
-                    </li>
-                </ul>
-            </nav>
+        </nav>
+        <div class="color-stripe">
+            <span class="yellow"></span>
+            <span class="orange"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+            <span class="red"></span>
         </div>
     </header>
 
-    <div id="viewport">
-        <div id="scroll-container">
-            <div id="box1" class="box box-a">a</div>
-            <div id="box2" class="box box-b">b</div>
-            <div id="box3" class="box box-c">c</div>
-            <div class="line"></div>
-            <header>
-                <a href="https://greensock.com/scrolltrigger">
-                    <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/greensock-logo-icon.svg" width="85" />
-                    <span class="name">ScrollTrigger</span>
-                </a>
-            </header>
-        </div>
+    <div class="offer-scroll  mx-auto text-center">
+        <marquee>
+            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+            </p>
+        </marquee>
     </div>
 
-    <div class="login-rigester">
-        <div id="register" class="register">
-            <form action="" id="register-form">
-                <input id="name" name="name" type="text" placeholder="Name" />
-                <input id="email" name="email" type="text" placeholder="Email" />
-                <input id="mobile" name="mobile" type="text" placeholder="mobile" />
-                <input id="password" name="password" type="password" placeholder="password" />
-                <div class="btn-holder">
-                    <input class="inp-sub" type="submit" value="Sign Up" />
+    <section class="banner">
+        <div class="container ">
+            <div class="row bg">
+                <div class="lhs">
+                    <h1>The smartest way to unlock your child's potential</h1>
+                    <h2>A skill development platform + home delivered learning Kit for children of age 2-8</h2>
+                    <div class="download-play">
+                        <a href="">
+                            <img src="./images/G Play.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./images/App store.png" alt="">
+                        </a>
+                    </div>
                 </div>
-            </form>
-            <br/>
-            <p>Already have account? <button class="btn link">Login</button></p>
-        </div>
-        <div id="login" class="login">
-            <form action="" id="login-form">
-                <input id="l_name" name="l_name" type="text" placeholder="Name" value="Nilesh" />
-                <input id="customSwitch" type="checkbox" name="keepLoggedIn">
-                <input id="l_password" name="l_password" type="password" placeholder="password" value="nil" />
-                <div class="btn-holder">
-                    <input class="inp-sub" type="submit" value="Sign In" />
+                <div class="rhs">
+                    <div class="lead-form">
+                        <div class="form-heading">
+                            <h3 class="text-center bold">Pre Register </h3>
+                            <p class="text-center">Get early bird offers</p>
+                        </div>
+                        <form id="register-form">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="age">Kid age</label>
+                                <select class="form-control" id="kidAge" name="kidAge" placeholder="Kid Age">
+                                  <option value="">0</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                </select>
+                            </div>
+                            <div class="form-group ">
+                                <label for="age">Mobile</label>
+                                <div class="input-group err-mob">
+                                    <input type="text" class="form-control" placeholder="Mobile" aria-label="Input group example" aria-describedby="mobile" id="mobile" name="mobile">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text" id="sendOTPBtn">Send</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group otp-box">
+                                <label for="age">OTP</label>
+                                <div class="input-group err-otp">
+                                    <input type="text" class="form-control" name="otp" id="otp" placeholder="OTP" aria-label="Input group example" aria-describedby="otp">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text" id="verifyOTPBtn">Verify</div>
+                                    </div>
+                                </div>
+                                <small id="emailHelp" class="form-text otp-error"> </small>
+                            </div>
+                            <br/>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary" id="submitForm">Join Now</button>
+                            </div>
+                        </form>
+                        <div class="slider-form">
+                            <div class="form-heading">
+                                <h3>Pre Register </h3>
+                                <p>Get early bird offers</p>
+                            </div>
+
+                            <form id="myForm" action=" ">
+                                <div class="form-group">
+                                    <label for="mobile2">Select age group</label>
+
+                                    <div class="btn-group age-btn-grp d-flex" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn btn-secondary" data-age="1">1-2</button>
+                                        <button type="button" class="btn btn-secondary" data-age="2">2-3</button>
+                                        <button type="button" class="btn btn-secondary" data-age="3">3-4</button>
+                                        <button type="button" class="btn btn-secondary" data-age="4">4-5</button>
+                                    </div>
+                                    <input type="text" class="form-control err-selectedAge" id="selectedAge" name="selectedAge">
+                                    <small id="selectedAgeHelp2" class="form-text  "> </small>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="mobile2">Mobile</label>
+                                    <div class="input-group err-mob2">
+                                        <input type="text" class="form-control" placeholder="Mobile" aria-label="Input group example" aria-describedby="mobile2" id="mobile2" name="mobile2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text" id="sendOTPBtn2">Send</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <label for="age">OTP</label>
+                                    <div class="input-group err-otp2">
+                                        <input type="text" class="form-control" name="otp2" id="otp2" placeholder="OTP" aria-label="Input group example" aria-describedby="otp2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text" id="verifyOTPBtn2">Verify</div>
+                                        </div>
+                                    </div>
+                                    <small id="emailHelp" class="form-text otp-error2"> </small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="username2">Username</label>
+                                    <input type="text" class="form-control" id="username2" name="username2" placeholder="Username2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email2">Email</label>
+                                    <input type="email2" class="form-control" id="email2" name="email2" placeholder="Email">
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-primary btn-lg" id="btnNext" type="submit">Next</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- THANK YOU -->
+                        <div class="thank-you-msg">
+                            <div class="inner">
+                                <h2>Tnak you!</h2>
+                                <h5>for joining with us, Our team will connecting you very soon.</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </form>
+            </div>
+            <!-- <div>
+                <div class="call-us">
+                    <p> Need help? Call us <a href="">98-7654-3210</a></p>
+                </div>
+            </div> -->
         </div>
-    </div>
+    </section>
 
-    <div id="viewport">
-        <div id="scroll-container">
-            <main>
-
-                <section id=" " class="full no-pad">
-
-                    <div class="game-display-mob">
-                        <div class="game-info">
-                            <h1>Heading</h1>
-                            <h2>Heading</h2>
-                            <h3>Heading</h3>
-                            <h4>Heading</h4>
-                            <h5>Heading</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="detail-box">
+                        <div class="details">
+                            <h1 class="bold">Step By Step Learning</h1>
+                            <ul>
+                                <li>
+                                    3000+ learning games and well-structured curriculum
+                                </li>
+                                <li>
+                                    Trackable progress and learning path
+                                </li>
+                                <li>
+                                    ​Designed to entertain, inform, and educate
+                                </li>
+                                </ol>
                         </div>
-                        <div class="mob-frame">
-                            <div class="img-holder">
-                                <img src="./images/mobile-mockup.png" alt="">
-                            </div>
+                        <div class="img ">
+                            <div class="bg step-by-step-bg"></div>
+                            <!-- <img src="./images/stepByStep.png" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="detail-box right">
+                        <div class="details">
+                            <h1 class="bold">Phygital Learning </h1>
+                            <ul>
+                                <li>
+                                    Interactive Lessons to touch and feel
+                                </li>
+                                <li>
+                                    Kit + App provides a blended learning experience
+                                </li>
+                                <li>
+                                    Helps develop and fine tune required motor skills
+                                </li>
+                                </ol>
+                        </div>
+                        <div class="img ">
+                            <div class="bg phygital-learning-bg"></div>
+                            <!-- <img src="./images/phygitalLearning.png" alt=""> -->
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="details">
+                            <h1 class="bold">Designed by experts</h1>
+                            <ul>
+                                <li>
+                                    Follows the latest scientific studies and research in early child education
+                                </li>
+                                <li>
+                                    Designed basis insights from teachers, psychologists, and child development experts
+                                </li>
+
+                                </ol>
+                        </div>
+                        <div class="img ">
+                            <div class="bg designed-by-experts-bg"></div>
+
+                            <!-- <img src="./images/designedByExperts.png" alt=""> -->
                         </div>
                     </div>
 
-                </section>
+                </div>
 
-                <section id=" ">
-                    <h1>Buttons</h1>
-                    <a href="#">Link</a><br/>
-                    <button class="btn">Button</button>
-                    <button class="btn outline">Button</button>
-                    <button class="btn round">Button</button>
-                    <button class="btn capsule">Button</button>
-                    <button class="btn capsule icon">
-                        <span class="btn-lable"> Button</span>
-                        <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                    </button>
-                </section>
-
-                <section id=" ">
-                    <div class="cards">
-                        <div class="card">
-                            <div class="cont">
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-03.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                                <span class="btn-lable"> Button</span>
-                                <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
-
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-01.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
-
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-02.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="sec4" class="full">
-                    <div style="position: relative;">
-                        <div class="section-wave-container top">
-                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
-                        </div>
-                        <div class="section-wave-container bottom">
-                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave-two" d=""/></svg>
-                        </div>
-                        <div class="bar">
-                            <div class="div1"></div>
-                            <div class="div2"></div>
-                            <div class="div3"></div>
-                            <div class="div4"></div>
-                            <div class="div5"></div>
-                            <!-- <div class="div6"></div> -->
-                        </div>
-                    </div>
-                </section>
-
-                <section id="sec5">
-                    <div class="cards one-two">
-                        <div class="card">
-                            <h4>Card Title</h4>
-                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                            <div class="cta">
-                                <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h4>Card Title</h4>
-                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                            <div class="cta">
-                                <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer></footer>
+            </div>
         </div>
-    </div>
+    </section>
+    <section class="full no-pad">
+        <div class="container">
+            <div class="parallelogram-shape"> </div>
+            <div class="parallelogram-box">
+                <div class="bg">
+                    <div class="row">
+                        <div class="col ">
+                            <div class="what">
+                                <h1>What is <span>Leapbridge?</span> </h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque autem nihil odio impedit nemo laudantium vitae alias vero beatae! Quasi et necessitatibus eaque quis? Perspiciatis dicta doloremque aspernatur perferendis
+                                    eum.
+                                </p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque autem nihil odio impedit nemo laudantium vitae alias vero beatae! Quasi et necessitatibus eaque quis? Perspiciatis dicta doloremque aspernatur perferendis
+                                    eum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="why">
+                                <h1>Why <span>Leapbridge?</span> </h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque autem nihil odio impedit nemo laudantium vitae alias vero beatae! Quasi et necessitatibus eaque quis? Perspiciatis dicta doloremque aspernatur perferendis
+                                    eum.
+                                </p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque autem nihil odio impedit nemo laudantium vitae alias vero beatae! Quasi et necessitatibus eaque quis? Perspiciatis dicta doloremque aspernatur perferendis
+                                    eum.
+                                </p>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="center">Parents love <span>Leapbridge</span> </h1>
+                    <div class="testimonials">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="wrapper">
+                                        <div class="user">
+                                            <div class="img female">
+                                                <img src="./images/photo.jpeg" alt="">
+                                            </div>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                        <div class="quote">
+                                            <h1>"</h1>
+                                            <p>
+                                                My three year old daughter finds this app very entertaining and informative! Thank you Leapbridge.
+                                            </p>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="wrapper">
+                                        <div class="user">
+                                            <div class="img male">
+                                                <img src="./images/photo.jpeg" alt="">
+
+                                            </div>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                        <div class="quote">
+                                            <p>
+                                                My three year old daughter finds this app very entertaining and informative! Thank you Leapbridge.
+                                            </p>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="wrapper">
+                                        <div class="user">
+                                            <div class="img  female">
+                                                <img src="./images/photo.jpeg" alt="">
+
+                                            </div>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                        <div class="quote">
+                                            <p>
+                                                My three year old daughter finds this app very entertaining and informative! Thank you Leapbridge.
+                                            </p>
+                                            <div class="text">
+                                                <h5>Roshni Singh</h5>
+                                                <p>Mother</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </button>
+                        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="footer-strip">
+                <img id="footer-logo-strip" src="./images/logo.png" alt="">
+                <h4>To know more - please write us on: <a href="mailto:support@leapbridge.com">support@leapbridge.com</a> </h4>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="color-stripe">
+            <span class="yellow"></span>
+            <span class="orange"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+            <span class="red"></span>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12  col-md-4">
+                    <div class="future-tec-sec">
+                        <img class="f-tech" src="./images/navneet-futurtech.png" alt="">
+                        <div class="store-btns">
+                            <a href="http://" target="_blank" rel="noopener noreferrer"> <img src="./images/G Play.png" alt=""></a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"> <img src="./images/App store.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xs-12  col-md-4">
+                    <div class="contact">
+                        <h5>Contact</h5>
+                        <p>1B,Benefice Business House, Mathuradas Mill Compound, N.M.Joshi Marg, Lower Parel Mumbai - 400 013 Maharashtra
+                        </p>
+                        <p>Email: <a href="mailto:info@leapbridge.com"> info@leapbridge.com</a></p>
+                        <p>
+                            Call: <a href="tel:+">98-7654-3210</a>
+                        </p>
+                    </div>
+                </div>
+                <div class=" col-xs-12 col-md-4">
+                    <div class="footer-menu">
+                        <h5>Menu</h5>
+                        <ul>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./careers.html">Careers</a></li>
+                            <li><a href="http://">Kit</a></li>
+                            <li><a href="http://">Conatct</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class=" col-xs-12 col-md-4">
+                    <h5>Connect</h5>
+                    <ul class="social">
+                        <li>
+                            <a href=""><img width="40" src="./images/social/fb.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/ig.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/in.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/tw.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/yt.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="policy-copy">
+            <div class="container py-3">
+                <div class="row">
+                    <div class=" col-sm-12  col-md-6">
+                        <p><small> © 2022 Leapbridge Learning - A Navneet FutureTech Initiative</small></p>
+                    </div>
+                    <div class="col">
+                        <p class="privacy"><small> <a href="http://">Privacy policy</a>  </small> <span>|</span> <small> <a href="http://">Privacy policy</a>  </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Start of navneet8763 Zendesk Widget script -->
+    <script id='ze-snippet' src='https://static.zdassets.com/ekr/snippet.js?key=11154f21-daf2-4beb-8860-ccfdc5294c43'></script>
+    <!-- End of navneet8763 Zendesk Widget script -->
 </body>
 
 </html>

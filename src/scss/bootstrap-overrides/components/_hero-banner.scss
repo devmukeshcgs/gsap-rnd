@@ -1,22 +1,22 @@
  .banner {
-     background: #f2f8ff;
+     //  background: #f2f8ff;
+     background-image: url("../images/bg-pattern2.png");
+     background-position: center right;
+     background-size: contain;
      h1 {
          color: $text-clr;
          font-size: 3rem;
          font-weight: 700;
          text-align: center;
      }
-     h2 {
+     .sub-heading {
          text-align: center;
          font-weight: 400;
          color: $gray;
      }
      .bg {
-         height: 60vh;
-         background-image: url("../images/banner-bg.png");
-         background-position: center right;
-         background-size: contain;
-         background-repeat: no-repeat;
+         //  height: 60vh;
+         //  background-repeat: no-repeat;
          flex-direction: row;
          flex-wrap: nowrap;
          align-items: center;
@@ -124,22 +124,39 @@
          }
      }
      .lead-form {
+         width: 297px;
+         height: 600px;
          position: relative;
-         background: #ffffff;
-         border: 1px solid rgb(240, 240, 240);
-         border-radius: 2rem;
-         padding: 2rem 1rem;
+         border-radius: 2.8rem;
+         padding: 2rem 1.5rem;
          position: relative;
          margin-bottom: 1rem;
          overflow: hidden;
-         -webkit-box-shadow: 0px 0px 20px 0px #dbdbdb;
-         -moz-box-shadow: 0px 0px 20px 0px #dbdbdb;
-         box-shadow: 0px 0px 20px 0px #dbdbdb;
+         //  -webkit-box-shadow: 0px 0px 20px 0px #dbdbdb;
+         //  -moz-box-shadow: 0px 0px 20px 0px #dbdbdb;
+         //  box-shadow: 0px 0px 20px 0px #dbdbdb;
+         background-image: url("../images/mobile-mockup.png");
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: contain;
+         .lead-form-inner {
+             background: #ffffff;
+             // border: 1px solid rgb(240, 240, 240);
+             display: flex;
+             flex-direction: column;
+             flex-wrap: nowrap;
+             align-items: center;
+             justify-content: space-evenly;
+             height: 100%;
+             .form-heading {
+                 margin-top: 1rem;
+             }
+         }
          .thank-you-msg {
              display: none;
              position: absolute;
              padding: 1rem;
-             z-index: 1;
+             z-index: 5;
              top: 0;
              bottom: 0;
              left: 0;
@@ -209,6 +226,20 @@
          }
      }
      @media only screen and (max-width: 480px) {
+         .lead-form {
+             background-image: none;
+             width: auto;
+             height: auto;
+             border: 1px solid rgb(240, 240, 240);
+             border-radius: 2rem;
+             overflow: hidden;
+             background: #ffffff;
+             .lead-form-inner {
+                 form {
+                     width: 100%;
+                 }
+             }
+         }
          h1 {
              font-size: 2.5rem;
          }

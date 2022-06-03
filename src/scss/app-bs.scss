@@ -10,10 +10,16 @@
 @import "./bootstrap-overrides/footer";
 @import "./bootstrap-overrides/infoscroll";
 //PAGE
+@import "./bootstrap-overrides/components/login";
 @import "./bootstrap-overrides/components/home";
 @import "./bootstrap-overrides/components/hero-banner";
 @import "./bootstrap-overrides/components/testimonials";
+@import "./bootstrap-overrides/components/feature-slider";
 @import "./bootstrap-overrides/components/about";
 @import "./bootstrap-overrides/components/career";
+@import "./bootstrap-overrides/components/job";
+@import "./bootstrap-overrides/components/apply-job";
+@import "./bootstrap-overrides/components/products";
+@import "./bootstrap-overrides/components/cart";
 //BOOTSTRAP
 @import "~bootstrap/scss/bootstrap";

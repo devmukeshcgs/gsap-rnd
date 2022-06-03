@@ -1,0 +1,46 @@
+﻿{
+    "LeadDetails": [{
+            "Attribute": "EmailAddress",
+            "Value": "email@example.com"
+        },
+        {
+            "Attribute": "mx_City",
+            "Value": "Bangalore"
+        },
+        {
+            "Attribute": "SearchBy",
+            "Value": "EmailAddress"
+        }
+    ],
+    "Activity": {
+        "ActivityEvent": 105,
+        "ActivityNote": "Note for the activity",
+        "ActivityDateTime": "yyyy-MM-dd HH:mm:ss",
+        "Fields": [{
+                "SchemaName": "mx_Custom_1",
+                "Value": "123"
+            },
+            {
+                "SchemaName": "mx_Custom_2",
+                "Value": "2016-07-07 10:55:00"
+            },
+            {
+                "Attribute": "mx_KYC",
+                "Value": "",
+                "Fields": [{
+                        "Attribute": "Status",
+                        "Value": "Pending"
+                    },
+                    {
+                        "Attribute": "mx_CustomObject_2",
+                        "Value": "XYZ12345.png"
+                    },
+                    {
+                        "Attribute": "mx_CustomObject_4",
+                        "Value": "864563"
+                    }
+                ]
+            }
+        ]
+    }
+}
