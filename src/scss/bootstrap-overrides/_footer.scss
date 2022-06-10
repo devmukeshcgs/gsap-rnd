@@ -26,15 +26,31 @@
 }
 
 footer {
-    background-color: #323031;
-    padding: 4rem 0 0 0;
+    background-color: #00204c;
+    padding: 0rem 0 0 0;
     position: relative;
+    .f-tech {
+        position: relative;
+        &::after {
+            content: '';
+            margin-right: -15px;
+            display: block;
+            background: rgb(255, 255, 255);
+            width: 200%;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+            bottom: 0px;
+        }
+    }
     .color-stripe {
         position: absolute;
         top: 0px;
         width: 100%;
+        z-index: 10;
     }
     .future-tec-sec {
+        padding: 4rem 0rem;
         width: 100%;
         background: #ffffff;
         text-align: center;
@@ -54,6 +70,7 @@ footer {
         }
     }
     .contact {
+        padding: 4rem 0rem;
         p {
             a {
                 color: #ffffff;
@@ -65,14 +82,16 @@ footer {
             }
         }
     }
-    .footer-menu {}
+    .footer-menu {
+        padding: 4rem 0rem;
+    }
     h5 {
         margin-bottom: 1.5rem;
         font-weight: 700;
         color: #ffffff;
     }
     p {
-        color: $gray;
+        color: #ffffff;
     }
     ul {
         padding: 0px;
@@ -117,7 +136,7 @@ footer {
         }
     }
     .policy-copy {
-        margin-top: 2rem;
+        // margin-top: 2rem;
         background: #000;
         p {
             margin: 0px;
@@ -155,6 +174,9 @@ footer {
         }
     }
     @media only screen and (max-width: 480px) {
+        .f-tech {
+            background: #ffffff;
+        }
         .policy-copy {}
         .privacy {}
     }

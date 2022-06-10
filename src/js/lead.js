@@ -6,6 +6,10 @@ import validate from 'jquery-validation';
 const URL = "https://dev-api-leapbridge.demotrt.com/v1";
 
 $(function() {
+    var colors = ["#D8CDFF", "#FFCB8E", "#FFD1E2", "#FFE78A", "#D5F2FE", "#D3EDC2"];
+    var rand = Math.floor(Math.random() * colors.length);
+    $(".lead-form-inner").css("background-color", colors[rand]);
+
     $('#submitForm:input[type="submit"]').prop('disabled', true);
 
     $("#sendOTPBtn").on("click", function(event) {

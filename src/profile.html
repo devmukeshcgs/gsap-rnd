@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gsap rnd</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
-    <!-- <script src="https://rawgit.com/peacepostman/wavify/master/wavify.js"></script> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Leapbridge by Navneet</title>
 </head>
 
 <body>
@@ -46,6 +44,18 @@
                             <a class="nav-link" href="#">BLOG</a>
                         </li>
                     </ul>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                          User
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Parent Profile</a>
+                            <a class="dropdown-item" href="#">Progress Center</a>
+                            <a class="dropdown-item" href="#">Content Library</a>
+                            <a class="dropdown-item" href="#">Expert panel</a>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                    </div>
                     <!-- <div class="login-btn">
                     <ul class="navbar-nav  ">
                         <li class="nav-item">
@@ -72,44 +82,77 @@
         </marquee>
     </div>
 
-    <section class="full no-pad" id="about">
-        <div class="header about-header-bg">
-            <div class="container">
-                <h1>About</h1>
+    <div class="container">
+        <div class="profile-header">
+            <div class="parent-detail">
+                <div class="parent-pic">
+                    <img src="./images/parent.png" alt="" />
+                </div>
+                <div class="parent-name">
+                    <h1 class="bold">Profile</h1>
+                    <h4>Welcome User name</h4>
+                </div>
+            </div>
+            <div class="child-plan-sec">
+                <div class="childs">
+                    <div class="child-pic">
+                        <img src="./images/kid1.png" alt="" />
+                    </div>
+                    <div class="child-pic">
+                        <img src="./images/kid-2.png" alt="" />
+                    </div>
+                    <!-- <div class="child-pic add-child">+</div> -->
+                </div>
+                <div class="plan">
+                    <button class="btn"> Upgrade to the unlimited plan</button>
+                </div>
             </div>
         </div>
-        <div class="container bx-shadow">
-            <div class="row ">
-                <div class="col future-tech-col">
-                    <div class="future-tech">
-                        <div class="logo-img">
-                            <img src="./images/navneet-futurtech.png" alt="">
-                        </div>
-                        <h3 class="bold">About Navneet Futuretech </h3>
-                        <p>Navneet Education Limited (formerly known as Navneet Publication Limited), began its story in pre independent India! It was founded by the Gala Group in 1959, and has since then been a trusted and reliable educational content provider.</p>
-
-                        <p>Our immensely popular products like Vikas workbooks, Gala practice books, and YouVa full-scapes, are favorites amongst all eager learners. At Navneet we take immense pride in providing quality work in whatever we do.</p>
-                        <p>Over the decades, Navneet has emerged as the preferred brand for educational products among both teachers and students.</p>
+    </div>
+    <section class="container profile">
+        <div class="row">
+            <div class="col-3 profile-sidebar">
+                <ul>
+                    <li>
+                        <a class="active" href="">
+                            <img src="./images/parent-profile.png" /> Parent Profile</a>
+                    </li>
+                    <!-- <li><a href="">Progress Center</a></li> -->
+                    <!-- <li><a href="">Content Library</a></li> -->
+                    <li>
+                        <a href="">
+                            <img src="./images/expert-panel.png" /> Expert Panel</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9 profile-main">
+                <div class="profile-holder">
+                    <div class="profile-sec">
+                        <h4>Account</h4>
+                        <small>Change avatar</small>
+                    </div>
+                    <div class="profile-sec">
+                        <h4>Orders</h4>
+                        <small>Change avatar</small>
+                    </div>
+                    <div class="profile-sec">
+                        <h4>Settings</h4>
+                        <small>Change avatar</small>
+                    </div>
+                    <div class="profile-sec">
+                        <h4>Refer a friend</h4>
+                        <small>Change avatar</small>
+                    </div>
+                    <div class="profile-sec">
+                        <h4>Rate</h4>
+                        <small>Change avatar</small>
+                    </div>
+                    <div class="profile-sec">
+                        <h4>Support</h4>
+                        <small>Change avatar</small>
                     </div>
                 </div>
-                <div class="col leapbridge-col">
-                    <div class="leapbridge">
-                        <div class="logo-img">
-                            <img src="./images/logo.svg" alt="">
-                        </div>
-                        <h3 class="bold">About Leapbridge</h3>
-                        <p> In 2009 the Leapbridge International Pre-Schools was conceived by Navneet Education Limited to disseminate knowledge and provide a strong early year Pre-Primary education. However, we soon realised, the power of digital and Leapbridge
-                            is now an early year digital learning solution.</p>
 
-                        <p>Our purpose has always been to impart knowledge and inspire students. We strive to deliver good educational content that engages, entertains, and helps develop essential skills in our children. At Leapbridge, content is curated
-                            carefully and always considers the latest scientific research in early year development.</p>
-                        <p>In our role as education providers and knowledge enablers, we understand that digital only solutions fall short of delivering a holistic learning solution and have since developed a physical kit that blends the essential physical
-                            activities with digital lessons well.</p>
-                        <p>
-                            As teachers and educationists, we take great care to ensure that our products follow a structured learning process that is age appropriate. It allows children to truly enjoy and understand.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -192,6 +235,9 @@
         </div>
     </footer>
 
+    <!-- Start of navneet8763 Zendesk Widget script -->
+    <script id='ze-snippet' src='https://static.zdassets.com/ekr/snippet.js?key=11154f21-daf2-4beb-8860-ccfdc5294c43'></script>
+    <!-- End of navneet8763 Zendesk Widget script -->
 </body>
 
 </html>

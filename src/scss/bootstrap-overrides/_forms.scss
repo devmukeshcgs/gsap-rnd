@@ -10,9 +10,11 @@
         margin-left: 1rem;
         padding: 0 0.5rem;
         z-index: 2;
+        border-radius: 8px;
     }
     .form-control {
-        border-radius: 0.75rem !important;
+        border-radius: 0.5rem !important;
+        border: 0px transparent;
         // padding-top: 1rem;
         // padding-bottom: 1rem;
         // font-size: 1rem;
@@ -120,6 +122,8 @@
                 color: $gray;
                 // margin-bottom: 0.25rem !important;
                 // margin-top: -0.4rem !important;
+                border-radius: 8px;
+                overflow: hidden;
                 position: relative;
                 background: white;
                 margin-left: 0rem;
