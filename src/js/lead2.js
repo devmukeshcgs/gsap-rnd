@@ -75,6 +75,7 @@ $("#verifyOTPBtn2").on("click", function(event) {
             }
         }
     });
+
 })
 
 // SINGLE FIELD ONE TIME

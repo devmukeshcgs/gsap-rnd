@@ -20,6 +20,7 @@ import './lead2.js';
 import './career.js';
 import './job.js';
 import './apply-job.js';
+import './feedback-form.js';
 // import './firebase.js';
 // import './header.js'; 
 // import './banner.js';

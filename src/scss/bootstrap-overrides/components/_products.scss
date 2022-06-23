@@ -520,4 +520,8 @@
             button {}
         }
     }
+    .app-kit {
+        display: flex;
+        flex-direction: column;
+    }
 }

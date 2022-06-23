@@ -5,5 +5,8 @@
             position: relative;
             margin: auto;
         }
+        .form-control {
+            border: 1px solid $light-gray;
+        }
     }
 }
