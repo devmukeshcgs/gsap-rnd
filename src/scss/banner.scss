@@ -1,3 +1,7 @@
+#main-banner {
+    background-color: #a8e25e;
+}
+
 .banner {
     $lineHeight: 200px;
     display: flex;
@@ -190,7 +194,7 @@
 }
 
 .hero-banner {
-    background-image: url('../images/waves.png');
+    // background-image: url('../images/waves.png');
     background-repeat: no-repeat;
     min-height: 100vh;
     background-position: center center;
@@ -203,20 +207,24 @@
     align-items: center;
     .text {
         text-align: center;
-        background: rgb(255 255 255 / 80%);
+        // background: rgb(255 255 255 / 80%);
         h1 {
             // background: rgb(255 255 255 / 80%);
             padding: 0.5rem 1.5rem 0.5rem 1.5rem;
             border-radius: 3rem;
+            color: #1fa151;
+            font-weight: 400;
             span {
+                font-weight: 700;
                 // background: #ffffff;
                 // padding: 0.5rem 1.5rem;
                 border-radius: 3rem;
-                color: $green;
+                color: #1857b6;
             }
         }
         h3 {
             color: $caption-color;
+            color: #ffffff;
         }
         .stores {
             width: 100%;
@@ -247,25 +255,27 @@
             align-content: center;
             align-items: center;
             width: 100%;
-            background: white;
-            border-radius: 0.5rem;
-            border: 1px solid #e8e8e8;
+            background: #fff061;
+            // border-radius: 0.5rem;
+            border: 4px solid #ffde2f;
+            border-radius: 2rem;
             margin-bottom: 1rem;
             .countdown {
                 flex: 1;
                 // border: 1px solid #e8e8e8;
                 text-align: center;
-                border-radius: 0.5rem;
                 margin: 0.5rem;
                 padding: 1rem;
                 p {
-                    font-size: 2rem;
+                    font-size: 3rem;
                     font-weight: bold;
                     text-align: center;
                     margin: 0;
+                    color: #dc9346;
                 }
                 span {
                     font-size: 1rem;
+                    color: #dc9346;
                     text-align: center;
                 }
             }

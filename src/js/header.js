@@ -60,7 +60,6 @@ $(function() {
     //     $('header').removeClass('fixed-header');
     //     // $('nav div').removeClass('visible-title');
     // }
-
 })
 
 const burgerMenu = document.getElementById("burger");
