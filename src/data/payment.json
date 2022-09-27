@@ -1,0 +1,35 @@
+﻿{
+    "EmailAddress": "anna@example.com",
+    "ActivityEvent": 205,
+    "ActivityNote": "Payment Details from Mukesh",
+    "FirstName": "",
+    "LastName": "",
+    "Phone": "",
+    "Fields": [{
+            "SchemaName": "mx_Custom_1",
+            "Value": "10"
+        },
+        {
+            "SchemaName": "mx_Custom_2",
+            "Value": "INR"
+        },
+        {
+            "SchemaName": "mx_Custom_3",
+            "Value": "1000"
+        },
+        {
+            "SchemaName": "mx_Custom_4",
+
+
+            "Value": "Pending"
+        },
+        {
+            "SchemaName": "mx_Custom_5",
+            "Value": "RAZORID"
+        },
+        {
+            "SchemaName": "mx_Custom_6",
+            "Value": "RAZORID"
+        }
+    ]
+}

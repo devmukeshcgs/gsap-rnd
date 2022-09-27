@@ -13,238 +13,184 @@
 </head>
 
 <body>
-    <div class='loader df aic jcc'>
-        <div>
-            <h1>Loading</h1>
-            <h2 class='loader--text'>0%</h2>
-        </div>
-    </div>
-
     <header>
-        <div class="container">
-            <div class="menu-btn">
-                <img src="./images/menu.svg" alt="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container fluid">
+                <a class="navbar-brand" href="#">
+                    <img id="logo" class="logo" src="./images/logo-only.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">APP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./careers.html">CAREERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./profile.html">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                    </ul>
+                    <!-- <div class="login-btn">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">LOGIN</a>
+                        </li>
+                    </ul>
+                </div> -->
+                </div>
             </div>
-            <div class="logo">
-                <img src="./images/logo.svg" width="150" alt="">
-            </div>
-            <nav class="main-menu">
-                <ul class="nav ">
-                    <li>
-                        <a href="#sec1">About</a>
-                    </li>
-                    <li>
-                        <a href="#sec2">Features</a>
-                    </li>
-                    <li>
-                        <a href="#sec3">Purches</a>
-                    </li>
-                    <li>
-                        <a href="#sec4">Waves</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <button class="btn capsule login-btn">
-                            <span class="btn-lable"> Login</span>
-                    </button>
-                        <button class="btn capsule logout-btn">
-                            <span class="btn-lable"> Logout</span>
-                            <span class="username"></span>
-                            <!-- <span class="profile-pic"> <img src="./images/dewey.jpg" width="40" alt=""  ></span> -->
-                    </button>
-                    </li>
-                </ul>
-            </nav>
+        </nav>
+        <div class="color-stripe">
+            <span class="yellow"></span>
+            <span class="orange"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+            <span class="red"></span>
         </div>
     </header>
 
-    <div id="viewport">
-        <div id="scroll-container">
-            <div id="box1" class="box box-a">a</div>
-            <div id="box2" class="box box-b">b</div>
-            <div id="box3" class="box box-c">c</div>
-            <div class="line"></div>
-            <header>
-                <a href="https://greensock.com/scrolltrigger">
-                    <img class="greensock-icon" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/greensock-logo-icon.svg" width="85" />
-                    <span class="name">ScrollTrigger</span>
-                </a>
-            </header>
-        </div>
+    <div class="offer-scroll  mx-auto text-center">
+        <marquee>
+            <p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+            </p>
+        </marquee>
     </div>
 
-    <div class="login-rigester">
-        <div id="register" class="register">
-            <form action="" id="register-form">
-                <input id="name" name="name" type="text" placeholder="Name" />
-                <input id="email" name="email" type="text" placeholder="Email" />
-                <input id="mobile" name="mobile" type="text" placeholder="mobile" />
-                <input id="password" name="password" type="password" placeholder="password" />
-                <div class="btn-holder">
-                    <input class="inp-sub" type="submit" value="Sign Up" />
+    <section class="full no-pad" id="about">
+        <div class="header about-header-bg">
+            <div class="container">
+                <h1>About</h1>
+            </div>
+        </div>
+        <div class="container bx-shadow">
+            <div class="row ">
+                <div class="col future-tech-col">
+                    <div class="future-tech">
+                        <div class="logo-img">
+                            <img src="./images/navneet-futurtech.png" alt="">
+                        </div>
+                        <h3 class="bold">About Navneet Futuretech </h3>
+                        <p>Navneet Education Limited (formerly known as Navneet Publication Limited), began its story in pre independent India! It was founded by the Gala Group in 1959, and has since then been a trusted and reliable educational content provider.</p>
+
+                        <p>Our immensely popular products like Vikas workbooks, Gala practice books, and YouVa full-scapes, are favorites amongst all eager learners. At Navneet we take immense pride in providing quality work in whatever we do.</p>
+                        <p>Over the decades, Navneet has emerged as the preferred brand for educational products among both teachers and students.</p>
+                    </div>
                 </div>
-            </form>
-            <br/>
-            <p>Already have account? <button class="btn link">Login</button></p>
-        </div>
-        <div id="login" class="login">
-            <form action="" id="login-form">
-                <input id="l_name" name="l_name" type="text" placeholder="Name" value="Nilesh" />
-                <input id="customSwitch" type="checkbox" name="keepLoggedIn">
-                <input id="l_password" name="l_password" type="password" placeholder="password" value="nil" />
-                <div class="btn-holder">
-                    <input class="inp-sub" type="submit" value="Sign In" />
+                <div class="col leapbridge-col">
+                    <div class="leapbridge">
+                        <div class="logo-img">
+                            <img src="./images/logo.svg" alt="">
+                        </div>
+                        <h3 class="bold">About Leapbridge</h3>
+                        <p> In 2009 the Leapbridge International Pre-Schools was conceived by Navneet Education Limited to disseminate knowledge and provide a strong early year Pre-Primary education. However, we soon realised, the power of digital and Leapbridge
+                            is now an early year digital learning solution.</p>
+
+                        <p>Our purpose has always been to impart knowledge and inspire students. We strive to deliver good educational content that engages, entertains, and helps develop essential skills in our children. At Leapbridge, content is curated
+                            carefully and always considers the latest scientific research in early year development.</p>
+                        <p>In our role as education providers and knowledge enablers, we understand that digital only solutions fall short of delivering a holistic learning solution and have since developed a physical kit that blends the essential physical
+                            activities with digital lessons well.</p>
+                        <p>
+                            As teachers and educationists, we take great care to ensure that our products follow a structured learning process that is age appropriate. It allows children to truly enjoy and understand.
+                        </p>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="viewport">
-        <div id="scroll-container">
-            <main>
-                <section id=" " class="full no-pad">
-
-                </section>
-                <section id=" " class="full no-pad">
-
-                    <div class="game-display-mob">
-                        <div class="game-info">
-                            <h1>Heading</h1>
-                            <h2>Heading</h2>
-                            <h3>Heading</h3>
-                            <h4>Heading</h4>
-                            <h5>Heading</h5>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aspernatur non, velit perspiciatis excepturi nesciunt ea cumque reprehenderit, exercitationem delectus at. Voluptate explicabo ducimus sint quam doloremque tenetur
-                                quasi ullam!
-                            </p>
-                        </div>
-                        <div class="mob-frame">
-                            <div class="img-holder">
-                                <img src="./images/mobile-mockup.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
-
-                <section id=" ">
-                    <h1>Buttons</h1>
-                    <a href="#">Link</a><br/>
-                    <button class="btn">Button</button>
-                    <button class="btn outline">Button</button>
-                    <button class="btn round">Button</button>
-                    <button class="btn capsule">Button</button>
-                    <button class="btn capsule icon">
-                        <span class="btn-lable"> Button</span>
-                        <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                    </button>
-                </section>
-
-                <section id=" ">
-                    <div class="cards">
-                        <div class="card">
-                            <div class="cont">
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-03.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                                <span class="btn-lable"> Button</span>
-                                <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                                </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
-
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-01.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="cont">
-
-                                <h4>Card Title</h4>
-                                <div class="img">
-                                    <img src="./images/mascot/mascot-02.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                                <div class="cta">
-                                    <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="sec4" class="full">
-                    <div style="position: relative;">
-                        <div class="section-wave-container top">
-                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave" d=""/></svg>
-                        </div>
-                        <div class="section-wave-container bottom">
-                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="feel-the-wave-two" d=""/></svg>
-                        </div>
-                        <div class="bar">
-                            <div class="div1"></div>
-                            <div class="div2"></div>
-                            <div class="div3"></div>
-                            <div class="div4"></div>
-                            <div class="div5"></div>
-                            <!-- <div class="div6"></div> -->
-                        </div>
-                    </div>
-                </section>
-
-                <section id="sec5">
-                    <div class="cards one-two">
-                        <div class="card">
-                            <h4>Card Title</h4>
-                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                            <div class="cta">
-                                <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h4>Card Title</h4>
-                            <!-- <img class="img" src="./images/content/header.png" alt=""> -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, sunt cum impedit iusto necessitatibus a placeat at quaerat, inventore quas quod,</p>
-                            <div class="cta">
-                                <button class="btn capsule icon">
-                            <span class="btn-lable"> Button</span>
-                            <span class="btn-icon"> <img src="./images/icons/arrow-right.svg" alt=""> </span>
-                        </button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer></footer>
+    <footer>
+        <div class="color-stripe">
+            <span class="yellow"></span>
+            <span class="orange"></span>
+            <span class="blue"></span>
+            <span class="pink"></span>
+            <span class="red"></span>
         </div>
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class=" col-xs-12  col-md-4 f-tech">
+                    <div class="future-tec-sec">
+                        <img class="f-tech" src="./images/navneet-futurtech.png" alt="">
+                        <div class="store-btns">
+                            <a href="http://" target="_blank" rel="noopener noreferrer"> <img src="./images/G Play.png" alt=""></a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer"> <img src="./images/App store.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xs-12  col-md-4">
+                    <div class="contact">
+                        <h5>Contact</h5>
+                        <p> Navneet FutureTech Limited</p>
+                        <p>1B, Benefice Business House, <br/>1st Floor, Mathuradas Mill Compound, N.M.Joshi Marg, <br/>Lower Parel Mumbai - 400 013 Maharashtra. India</p>
+                        <p>Email: <a href="mailto:info@leapbridge.com"> info@leapbridge.com</a></p>
+                        <p>
+                            <!-- Call: <a href="tel:+">98-7654-3210</a> -->
+                        </p>
+                    </div>
+                </div>
+                <div class=" col-xs-12 col-md-4">
+                    <div class="footer-menu">
+                        <h5>Menu</h5>
+                        <ul>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="./about.html">About</a></li>
+                            <li><a href="./careers.html">Careers</a></li>
+                            <li><a href="">Product</a></li>
+                            <li><a href="">Conatct</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class=" col-xs-12 col-md-4">
+                    <h5>Connect</h5>
+                    <ul class="social">
+                        <li>
+                            <a href=""><img width="40" src="./images/social/fb.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/ig.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/in.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/tw.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img width="40" src="./images/social/yt.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        <div class="policy-copy">
+            <div class="container py-3">
+                <div class="row">
+                    <div class=" col-sm-12  col-md-6">
+                        <p><small> © 2022 Leapbridge Learning - A Navneet FutureTech Initiative</small></p>
+                    </div>
+                    <div class="col">
+                        <p class="privacy"><small> <a href="http://">Privacy policy</a>  </small> <span>|</span> <small> <a href="http://">T & C</a>  </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

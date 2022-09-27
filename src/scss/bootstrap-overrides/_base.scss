@@ -1,0 +1,85 @@
+body {
+    // background-image: url("../images/body-bg.png");
+    background-position: center;
+    background-size: contain;
+    // background-repeat: no-repeat;
+    // background: #f2f8ff !important;
+}
+
+.color-stripe {
+    display: flex;
+    span {
+        display: block;
+        height: 5px;
+        flex: 1;
+    }
+    .yellow {
+        background: $lb-yellow;
+    }
+    .orange {
+        background: $lb-orange;
+    }
+    .blue {
+        background: $lb-blue;
+    }
+    .pink {
+        background: $lb-pink;
+    }
+    .red {
+        background: $lb-red;
+    }
+}
+
+section {
+    padding: 4rem 0;
+    @media only screen and (max-width: 768px) {
+        padding: 3rem 0;
+    }
+    @media only screen and (max-width: 480px) {
+        padding: 1.5rem 0;
+    }
+}
+
+section {
+    padding: 2rem 0px;
+    // min-height: 100vh;
+    width: 100%;
+    // width: 100vw;
+    position: relative;
+    // max-width: 1080px;
+    margin: 0 auto;
+    &.full {
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    &.auto-height {
+        height: auto;
+        min-height: auto;
+    }
+    .sec-head {
+        margin: 0.5rem 0rem 2rem;
+    }
+    @media only screen and (max-width: 768px) {
+        min-height: auto;
+        padding: 2rem;
+    }
+    @media only screen and (max-width: 480px) {
+        min-height: auto;
+        padding: 1rem;
+    }
+}
+
+.bx-shadow {
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.no-pad {
+    padding: 0px;
+}
+
+p {
+    font-size: 1rem;
+}

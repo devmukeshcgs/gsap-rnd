@@ -1,50 +1,61 @@
 {
-    "author": "mukesh",
-    "name": "gsap",
-    "version": "5.11.0",
+    "author": "leapbridge",
+    "name": "frontend-webpack-boilerplate",
+    "version": "5.13.0",
     "description": "Starter project template boilerplate based on Webpack with SASS/PostCSS and babel ES6/7 support.",
     "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
     "browserslist": [
         "last 2 versions",
         "> 5%"
     ],
+    "bugs": {
+        "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
+        "email": "plamen@athlonsofia.com"
+    },
+    "contributors": [
+        {
+            "name": "Plamen Nikolov",
+            "email": "me@pnikoloff.com",
+            "url": "https://pnikoloff.com"
+        }
+    ],
     "devDependencies": {
-        "@babel/core": "^7.16.0",
+        "@babel/core": "^7.17.9",
         "@babel/preset-env": "^7.16.0",
-        "autoprefixer": "^10.4.0",
+        "autoprefixer": "10.4.5",
         "babel-loader": "^8.2.3",
         "clean-webpack-plugin": "^4.0.0",
-        "copy-webpack-plugin": "^9.1.0",
+        "copy-webpack-plugin": "^10.2.3",
         "css-loader": "^6.5.1",
         "css-minimizer-webpack-plugin": "^3.1.1",
-        "eslint": "^8.2.0",
+        "eslint": "^8.13.0",
         "eslint-config-airbnb": "^19.0.0",
-        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-react": "^7.27.0",
         "eslint-plugin-react-hooks": "^4.3.0",
-        "handlebars-loader": "^1.7.1",
+        "file-loader": "^6.2.0",
         "html-loader": "^3.1.0",
         "html-webpack-plugin": "^5.5.0",
-        "image-minimizer-webpack-plugin": "^2.2.0",
+        "image-minimizer-webpack-plugin": "^3.2.3",
+        "imagemin": "^8.0.1",
         "imagemin-gifsicle": "^7.0.0",
         "imagemin-jpegtran": "^7.0.0",
         "imagemin-optipng": "^8.0.0",
-        "imagemin-svgo": "^9.0.0",
+        "imagemin-svgo": "^10.0.1",
         "mini-css-extract-plugin": "^2.4.4",
+        "node-sass": "^4.14.1",
         "postcss": "^8.3.11",
         "postcss-loader": "^6.2.0",
-        "sass": "^1.43.4",
+        "sass": "^1.50.1",
         "sass-lint": "^1.13.1",
-        "sass-loader": "^12.3.0",
+        "sass-loader": "^7.1.0",
         "terser-webpack-plugin": "^5.2.5",
-        "webpack": "^5.64.0",
+        "webpack": "^5.72.0",
         "webpack-bundle-analyzer": "^4.5.0",
         "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^4.4.0",
-        "webpack-merge": "^5.8.0",
-        "ejs-loader": "^0.5.0",
-        "ejs-webpack-loader": "^2.2.2"
+        "webpack-dev-server": "^4.8.1",
+        "webpack-merge": "^5.8.0"
     },
     "engines": {
         "node": "^12 || >=14"
@@ -73,18 +84,13 @@
     },
     "target": "web",
     "dependencies": {
-        "ejs-webpack-loader": "^2.2.2",
-        "firebase": "^9.6.8",
-        "gsap": "^3.9.1",
-        "handlebars": "^4.7.7",
-        "imagesloaded": "^4.1.4",
+        "@popperjs/core": "^2.11.5",
+        "bootstrap": "^4.6.0",
         "jquery": "^3.6.0",
         "jquery-validation": "^1.19.3",
-        "rive-js": "0.7.16",
-        "scrollmagic": "^2.0.8",
-        "smooth-scrollbar": "^8.7.4",
-        "swiper": "^8.0.7",
-        "verge": "^1.10.2",
-        "wavify": "^1.0.0"
+        "lodash": "^4.17.21",
+        "popper.js": "^1.16.1",
+        "regenerator-runtime": "^0.13.9",
+        "shopify-buy": "^2.15.1"
     }
 }

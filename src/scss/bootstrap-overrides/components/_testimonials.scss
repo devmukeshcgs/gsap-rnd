@@ -1,0 +1,131 @@
+.testimonials {
+    background: #ffffff;
+    // max-width: 700px;
+    // margin: 2rem;
+    border: 1px solid #dfdfdf;
+    border-radius: 2rem;
+    overflow: hidden;
+    .carousel {
+        // padding: 0.5rem;
+        .carousel-indicators {
+            li {
+                width: 10px;
+                height: 10px;
+                border: 0px;
+                border-radius: 5px;
+                background-color: $lb-orange;
+            }
+        }
+        .carousel-inner {
+            // padding: 0.5rem;
+            .carousel-item {
+                // padding: 0.5rem;
+                .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-content: center;
+                    align-items: center;
+                    // padding: 2rem;
+                    width: 100%;
+                    .user {
+                        // margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        align-content: center;
+                        align-items: center;
+                        padding: 1rem;
+                        .img {
+                            // margin: 1.5rem;
+                            width: 300px;
+                            // height: 100px;
+                            border-radius: 1.5rem;
+                            overflow: hidden;
+                            border: 1px;
+                            background-color: aliceblue;
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            img {
+                                width: 100%;
+                            }
+                            &.male {
+                                // background-image: url("../images/men.jpg");
+                            }
+                            &.female {
+                                // background-image: url("../images/women.jpg");
+                            }
+                        }
+                        .text {
+                            display: none;
+                            h5 {
+                                font-weight: 700;
+                                color: $text-clr;
+                                margin-bottom: 0px;
+                            }
+                            p {
+                                margin-bottom: 0px;
+                            }
+                        }
+                    }
+                    .quote {
+                        padding: 1rem;
+                        // max-width: 600px;
+                        margin: 0 auto;
+                        h1 {
+                            text-align: center;
+                            color: $lb-orange;
+                        }
+                        p {
+                            font-size: 1.5rem;
+                            text-align: center;
+                            margin-bottom: 2rem;
+                        }
+                        .text {
+                            h5 {
+                                font-weight: 700;
+                                color: $dark-gray;
+                                color: $lb-blue;
+                                margin-bottom: 0px;
+                                text-align: center;
+                            }
+                            p {
+                                font-size: 1rem;
+                                margin-bottom: 0px;
+                                color: $gray;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {}
+    @media only screen and (max-width: 480px) {
+        .carousel {
+            // padding: 0.5rem;
+            .carousel-indicators {
+                li {
+                    width: 10px;
+                    height: 10px;
+                    border: 0px;
+                    border-radius: 5px;
+                    background-color: $lb-orange;
+                }
+            }
+            .carousel-inner {
+                // padding: 0.5rem;
+                .carousel-item {
+                    // padding: 0.5rem;
+                    .wrapper {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+#apply-job-form {
+    .form-group {
+        margin-bottom: 1.5rem;
+        .error {
+            position: relative;
+            margin: auto;
+        }
+        .form-control {
+            border: 1px solid $light-gray;
+        }
+    }
+}

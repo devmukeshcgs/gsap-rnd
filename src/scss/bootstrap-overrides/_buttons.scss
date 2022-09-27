@@ -1,0 +1,19 @@
+.btn {
+    border-radius: 2rem!important;
+    padding: 0.5rem 1rem!important;
+    &.btn-sm {
+        padding: 0.25rem 0.5rem!important;
+    }
+    &.btn-xs {
+        // padding: 0.25rem 0.5rem
+    }
+}
+
+.btn-group,
+.btn-group-vertical {
+    border-radius: 2rem!important;
+    overflow: hidden;
+    .btn {
+        border-radius: 0!important;
+    }
+}

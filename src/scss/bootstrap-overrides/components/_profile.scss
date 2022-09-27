@@ -1,0 +1,155 @@
+.profile-header {
+    background-image: url("../images/bg-pattern2.png");
+    background-size: contain;
+    padding: 1.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    .parent-detail {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        div {
+            padding: 0 1rem;
+        }
+        .parent-pic {
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 0px;
+            border: 1px solid $light-gray;
+            background: #ffffff;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .parent-name {
+            h1 {
+                margin-bottom: 0px !important;
+            }
+        }
+    }
+    .child-plan-sec {
+        text-align: right;
+        .childs {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            justify-content: flex-end;
+            .child-pic {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                margin-left: 1rem;
+                width: 60px;
+                height: 60px;
+                background: #ffffff;
+                border: 1px solid $light-gray;
+                overflow: hidden;
+                border-radius: 50px;
+                overflow: hidden;
+                font-size: 3rem;
+                img {
+                    width: 50px;
+                }
+            }
+        }
+        .plan {
+            button {
+                background: $lb-yellow;
+            }
+        }
+    }
+}
+
+.profile {
+    .profile-sidebar {
+        ul {
+            -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 0;
+            padding: 1rem;
+            li {
+                list-style: none;
+                a {
+                    padding: 1rem;
+                    display: block;
+                    // margin-bottom: 1rem;
+                    color: $gray;
+                    border-bottom: 1px solid $light-gray;
+                    transition: 0.3s;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 0.5rem;
+                        border-radius: 50px;
+                        overflow: hidden;
+                    }
+                    &.active {
+                        color: $text-clr;
+                        font-weight: 700;
+                        padding-left: 1.5rem;
+                        img {
+                            -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+                            -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+                            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+                        }
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        transition: 0.3s;
+                        padding-left: 1.5rem;
+                        color: $text-clr;
+                        font-weight: 700;
+                    }
+                }
+                &:nth-last-child(1) {
+                    a {
+                        border-bottom: 0px solid $light-gray;
+                    }
+                }
+            }
+        }
+    }
+    .profile-main {
+        .profile-holder {
+            -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 0;
+            padding: 2rem;
+            .profile-sec {
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $light-gray;
+                h4 {
+                    color: $gray;
+                }
+                small {
+                    color: $mid-gray;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {}

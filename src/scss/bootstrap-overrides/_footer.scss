@@ -1,0 +1,183 @@
+.footer-strip {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffc107;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    // background-image: url("images/body-bg.png");
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 2rem;
+    img {
+        width: 150px;
+        margin-right: 1rem;
+    }
+    h4 {
+        color: $white;
+    }
+    @media only screen and (max-width: 768px) {}
+    @media only screen and (max-width: 480px) {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background-color: #00204c;
+    padding: 0rem 0 0 0;
+    position: relative;
+    .f-tech {
+        position: relative;
+        &::after {
+            content: '';
+            margin-right: -15px;
+            display: block;
+            background: rgb(255, 255, 255);
+            width: 200%;
+            position: absolute;
+            right: 100%;
+            top: 0px;
+            bottom: 0px;
+        }
+    }
+    .color-stripe {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 10;
+    }
+    .future-tec-sec {
+        padding: 4rem 0rem;
+        width: 100%;
+        background: #ffffff;
+        text-align: center;
+        .f-tech {
+            box-sizing: border-box;
+            max-width: 100%;
+            padding: 1rem;
+        }
+        .store-btns {
+            padding: 1rem;
+            a {
+                display: inline-block;
+                img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .contact {
+        padding: 4rem 0rem;
+        p {
+            a {
+                color: #ffffff;
+                transition: 0.3s;
+                &:hover {
+                    transition: 0.3s;
+                    color: #ffc107;
+                }
+            }
+        }
+    }
+    .footer-menu {
+        padding: 4rem 0rem;
+    }
+    h5 {
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    p {
+        color: #ffffff;
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+        li {
+            list-style: none;
+            p {
+                color: $gray;
+            }
+            a {
+                color: $gray;
+                display: block;
+                margin-bottom: 0.5rem;
+                transition: 0.3s;
+                &:hover {
+                    text-decoration: none;
+                    color: $lb-blue;
+                    transition: 0.3s;
+                }
+            }
+        }
+        &.social {
+            margin: 0px;
+            padding: 0px;
+            li {
+                list-style: none;
+                display: inline-block;
+                a {
+                    color: #323031;
+                    display: inline-block;
+                    margin-bottom: 0.5rem;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    transition: 0.3s;
+                    &:hover {
+                        transition: 0.3s;
+                        text-decoration: none;
+                        color: $lb-blue;
+                    }
+                }
+            }
+        }
+    }
+    .policy-copy {
+        // margin-top: 2rem;
+        background: #000;
+        p {
+            margin: 0px;
+        }
+    }
+    .privacy {
+        margin: 0px;
+        a {
+            transition: 0.3s;
+            color: #ffffff;
+            &:hover {
+                transition: 0.3s;
+                text-decoration: none;
+                color: $dark-gray;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .future-tec-sec {
+            .f-tech {}
+            .store-btns {
+                a {
+                    display: inline-block;
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+        .contact {
+            margin-top: 1rem;
+        }
+        .footer-menu {
+            margin-top: 1rem;
+        }
+    }
+    @media only screen and (max-width: 480px) {
+        .f-tech {
+            background: #ffffff;
+        }
+        .policy-copy {}
+        .privacy {}
+    }
+}
