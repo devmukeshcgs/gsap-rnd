@@ -2,8 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { heroVideo, smallHeroVideo } from '../utils';
-import { animateWithGsap } from '../utils/animations';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,12 +37,12 @@ const Hero = () => {
     gsap.to('.img2', { top: '60%', left: '70%', delay: 1 }, { opacity: 0, top: "50%", left: "50%", duration: 0.5 })
     gsap.to('.img3', { top: '10%', left: '80%', delay: 1 }, { opacity: 0, top: "50%", left: "50%", duration: 0.5 })
     gsap.to('.img4', { top: '70%', left: '30%', delay: 1 }, { opacity: 0, top: "50%", left: "50%", duration: 0.5 })
+ 
   }, [])
 
 
   useEffect(() => {
     const section = sectionRef.current;
-
     gsap.fromTo(
       section.querySelectorAll(".p-pic"),
       { opacity: 1, },

@@ -28,16 +28,16 @@ const SignUp = () => {
     }, [])
 
     return (
-        <section className="w-full h-screen flex   relative">
-            <div className=" w-1/3"></div>
-            <div className="h-5/6  flex-center flex-col w-1/3 py-8">
-                <p id="hero" className="sec-title-2">Get Europe's most important articals, participets in transnational debates, support great journalism and uphold a free press.</p>
-                <div
-                    id=" "
-                    className="position-absolute bottom-5"
-                >
-                    <a href="#highlights" className="text-blue ">Learn More</a>
+        <section className="w-full h-screen flex  flex-col justify-center relative">
+            <div className="flex flex-row">
+
+                <div className=" w-1/3"></div>
+                <div className="h-5/6  flex-center flex-col w-1/3 py-8">
+                    <p id="hero" className="sec-title-2">Get Europe's most important articals, participets in transnational debates, support great journalism and uphold a free press.</p>
                 </div>
+            </div>
+            <div id="cta" className="text-center py-8" >
+                <a href="#highlights" className="text-white bg-black px-4 py-2 rounded-full">Sign Up</a>
             </div>
         </section>
     )
