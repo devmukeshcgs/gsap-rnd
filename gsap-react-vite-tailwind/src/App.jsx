@@ -7,12 +7,16 @@ import HowItWorks from './components/HowItWorks';
 import Footer from './components/Footer';
 
 import * as Sentry from '@sentry/react';
+import SignUp from './components/SignUp';
+import WaitList from './components/WaitList';
 
 const App = () => {
   return (
-    <main className="bg-black">
+    <main className="bg-white">
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
+      <SignUp />
+      <WaitList />
       {/* <Highlights /> */}
       {/* <Model /> */}
       {/* <Features /> */}
