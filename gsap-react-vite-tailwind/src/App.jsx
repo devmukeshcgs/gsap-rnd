@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import * as Sentry from '@sentry/react';
 import SignUp from './components/SignUp';
 import WaitList from './components/WaitList';
-
+import UnsplashGallery from './components/UnsplashGallery'; 
 const App = () => {
   return (
     <main className="bg-white">
@@ -17,6 +17,7 @@ const App = () => {
       <Hero />
       <SignUp />
       <WaitList />
+      <UnsplashGallery />
       {/* <Highlights /> */}
       {/* <Model /> */}
       {/* <Features /> */}
