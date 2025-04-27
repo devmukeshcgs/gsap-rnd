@@ -10,19 +10,21 @@ import * as Sentry from '@sentry/react';
 import SignUp from './components/SignUp';
 import WaitList from './components/WaitList';
 import UnsplashGallery from './components/UnsplashGallery'; 
+import FullScreenSlider from './components/FullScreenSlider';
 const App = () => {
   return (
     <main className="bg-white">
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <UnsplashGallery /> */}
+      <FullScreenSlider />
       <Hero />
       <SignUp />
       <WaitList />
-      <UnsplashGallery />
       {/* <Highlights /> */}
       {/* <Model /> */}
       {/* <Features /> */}
       {/* <HowItWorks /> */}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   )
 }
