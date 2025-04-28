@@ -55,17 +55,33 @@ const Slider = () => {
         fetchImages();
     }, []);
 
-    // Initialize slider animations when images load
+    // // Initialize slider animations when images load
+    // useEffect(() => {
+    //     if (images.length === 0 || isLoading) return;
+
+    //     // Hide all slides except the first one
+    //     slidesRef.current.forEach((slide, index) => {
+    //         if (index !== 0 && slide) {
+    //             gsap.set(slide, { opacity: 0, scale: 0.8 });
+    //         }
+    //     });
+    // }, [images, isLoading]);
+    // Initialize slider with clip-path animations
     useEffect(() => {
         if (images.length === 0 || isLoading) return;
 
-        // Hide all slides except the first one
+        // Set initial clip-path for all slides except the first
         slidesRef.current.forEach((slide, index) => {
-            if (index !== 0 && slide) {
-                gsap.set(slide, { opacity: 0, scale: 0.8 });
+            if (slide) {
+                if (index === 0) {
+                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' });
+                } else {
+                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)' });
+                }
             }
         });
     }, [images, isLoading]);
+
 
     const goToSlide = (index) => {
         if (index === currentIndex || index < 0 || index >= images.length) return;
@@ -91,15 +107,49 @@ const Slider = () => {
             }, '<0.3'); // Overlap animations slightly
     };
 
-    const goNext = () => {
-        const nextIndex = (currentIndex + 1) % images.length;
-        goToSlide(nextIndex);
-    };
 
-    const goPrev = () => {
-        const prevIndex = (currentIndex - 1 + images.length) % images.length;
-        goToSlide(prevIndex);
-    };
+    const animateWithClipPath = (direction) => {
+        const nextIndex = direction === 'next' 
+          ? (currentIndex + 1) % images.length
+          : (currentIndex - 1 + images.length) % images.length;
+    
+        const currentSlide = slidesRef.current[currentIndex];
+        const nextSlide = slidesRef.current[nextIndex];
+    
+        if (!currentSlide || !nextSlide) return;
+    
+        const tl = gsap.timeline();
+    
+        // Animate current slide out
+        tl.to(currentSlide, {
+          clipPath: direction === 'next' 
+            ? 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'  // Slide up
+            : 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', // Slide down
+          duration: 0.8,
+          ease: 'power2.inOut'
+        });
+    
+        // Animate next slide in
+        tl.to(nextSlide, {
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+          duration: 0.8,
+          ease: 'power2.inOut',
+          onComplete: () => setCurrentIndex(nextIndex)
+        }, '-=0.6'); // Overlap animations
+      };
+
+      const goNext = () => animateWithClipPath('next');
+      const goPrev = () => animateWithClipPath('prev');
+
+    // const goNext = () => {
+    //     const nextIndex = (currentIndex + 1) % images.length;
+    //     goToSlide(nextIndex);
+    // };
+
+    // const goPrev = () => {
+    //     const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    //     goToSlide(prevIndex);
+    // };
 
     if (isLoading) {
         return <div className="slider-loading">Loading images...</div>;
@@ -117,6 +167,8 @@ const Slider = () => {
                         <span className={`number ${index === currentIndex ? 'active' : ''}`}>{index}</span>
                     ))}
                 </div>
+
+                
                 <button className="slider-button prev" onClick={goPrev}>
                     PREV
                 </button>
@@ -124,7 +176,7 @@ const Slider = () => {
                     NEXT
                 </button>
 
-                <div className="slider-dots">
+                {/* <div className="slider-dots">
                     {images.map((_, index) => (
                         <button
                             key={index}
@@ -132,17 +184,18 @@ const Slider = () => {
                             onClick={() => goToSlide(index)}
                         />
                     ))}
-                </div>
+                </div> */}
             </div>
             <div className="slider" ref={sliderRef}>
                 {images.map((image, index) => (
-                    <div
-                        key={image.id}
-                        className={`slide ${index === currentIndex ? 'active' : ''}`}
-                        ref={el => (slidesRef.current[index] = el)}
-                    >
-                        <img src={image.url} alt={image.alt} />
-                    </div>
+                     <div
+                     key={image.id}
+                     className="slide"
+                     ref={el => (slidesRef.current[index] = el)}
+                   >
+                    <h1 className='title text-white text-center text-4xl font-semibold' >{image.title}</h1>
+                     <img src={image.url} alt={image.alt} />
+                   </div>
                 ))}
             </div>
 

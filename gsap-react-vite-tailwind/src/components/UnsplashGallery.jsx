@@ -3,7 +3,7 @@ import { createApi } from 'unsplash-js';
 
 // Initialize the Unsplash API client
 const unsplash = createApi({
-  accessKey: import.meta.env.VITE_UNSPLASH_ACCESS_KEY, // Replace with your actual key
+  // accessKey: import.meta.env.VITE_UNSPLASH_ACCESS_KEY, // Replace with your actual key
   // Optional: you can add other configuration options here
 });
 
@@ -13,6 +13,8 @@ function UnsplashGallery() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log("Effect");
+    
     const fetchPhotos = async () => {
       try {
         // Using the unsplash-js library methods
