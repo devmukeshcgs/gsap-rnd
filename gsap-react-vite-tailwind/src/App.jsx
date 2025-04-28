@@ -14,9 +14,9 @@ import FullScreenSlider from './components/FullScreenSlider';
 const App = () => {
   return (
     <main className="bg-white">
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <UnsplashGallery /> */}
-      <FullScreenSlider />
+      {/* <FullScreenSlider /> */}
       <Hero />
       <SignUp />
       <WaitList />
@@ -24,7 +24,7 @@ const App = () => {
       {/* <Model /> */}
       {/* <Features /> */}
       {/* <HowItWorks /> */}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   )
 }
