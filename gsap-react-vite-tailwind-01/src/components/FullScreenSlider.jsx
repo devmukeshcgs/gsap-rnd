@@ -24,9 +24,9 @@ const FullScreenSlider = () => {
         slidesRef.current.forEach((slide, index) => {
             if (slide) {
                 if (index === 0) {
-                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' });
+                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', scale: 1 });
                 } else {
-                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)' });
+                    gsap.set(slide, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', scale: 1.1 });
                 }
             }
         });
@@ -70,7 +70,7 @@ const FullScreenSlider = () => {
         if (!currentSlide || !nextSlide) return;
 
         const tl = gsap.timeline();
-        const duration = 0.5;
+        const duration = 0.8;
 
         // Animate current slide out
         tl.to(currentSlide, {
@@ -78,6 +78,8 @@ const FullScreenSlider = () => {
                 ? 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
                 : 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
             duration: duration,
+            // x: direction === 'next' ? 0 : 10,
+            scale: direction === 'next' ? 1 : 1.1,
             ease: 'power2.inOut',
             onComplete: () => {
                 console.log("CURRENT SLIDE", index);
@@ -91,6 +93,8 @@ const FullScreenSlider = () => {
                 ? 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
                 : 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             duration: duration,
+            // x: direction === 'next' ? 10 : 0,
+            scale: direction === 'next' ? 1.15 : 1,
             ease: 'power2.inOut',
             onComplete: () => {
                 console.log("NEXT SLIDE", index);
