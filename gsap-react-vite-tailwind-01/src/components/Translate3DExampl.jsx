@@ -17,7 +17,6 @@ const Translate3DExample = () => {
       duration: 1.5,
       ease: "power1.out",
     })
-    console.log(context);
     gsap.to(".newbox", {
       x: endX,
       duration: 1.5,

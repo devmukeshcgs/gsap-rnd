@@ -11,7 +11,7 @@ const App = () => {
     <main className="bg-white">
       <Navbar />
       <FullScreenSlider />
-      <Translate3DExample />
+      {/* <Translate3DExample /> */}
       {/* <Footer /> */}
     </main>
   )
