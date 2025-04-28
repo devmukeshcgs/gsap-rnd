@@ -21,6 +21,11 @@ const ststicImg = [
     },
 ]
 
+// LocalStorage keys
+const UNSPLASH_CACHE_KEY = 'unsplash_photos_cache';
+const CACHE_EXPIRY_KEY = 'unsplash_cache_expiry';
+const CACHE_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours cache
+
 const Slider = () => {
     const [images, setImages] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,18 +37,41 @@ const Slider = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
+                // Check if cached data exists and is still valid
+                const cachedData = localStorage.getItem(UNSPLASH_CACHE_KEY);
+                const cacheExpiry = localStorage.getItem(CACHE_EXPIRY_KEY);
+                const now = new Date().getTime();
+
+
+                if (cachedData && cacheExpiry && now < parseInt(cacheExpiry)) {
+                    // Use cached data
+                    setImages(JSON.parse(cachedData));
+                    setIsLoading(false);
+                    return;
+                }
+
                 const response = await fetch(
-                    `https://api.unsplash.com/photos/random?count=5&client_id="vCptQPrXejSAM_Ef5tmQyTB6DgvYF1dLhdK0QLA5-L0"`
+                    `https://api.unsplash.com/photos/random?count=5&client_id=vCptQPrXejSAM_Ef5tmQyTB6DgvYF1dLhdK0QLA5-L0`
                 );
                 const data = await response.json();
-                console.log('Data:', data);
+                console.log('Response Data :', data);
+                const photosData = data.map(img => ({
+                    id: img.id,
+                    url: img.urls.regular,
+                    alt: img.alt_description || 'Unsplash image'
+                }))
 
-                // setImages(data.map(img => ({
-                //     id: img.id,
-                //     url: img.urls.regular,
-                //     alt: img.alt_description || 'Unsplash image'
-                // })));
-                setImages(ststicImg);
+                setImages(data.map(img => ({
+                    id: img.id,
+                    url: img.urls.regular,
+                    alt: img.alt_description || 'Unsplash image'
+                })));
+                // STATIC Img
+                // setImages(ststicImg);
+
+                // Save to cache with expiry time
+                localStorage.setItem(UNSPLASH_CACHE_KEY, JSON.stringify(photosData));
+                localStorage.setItem(CACHE_EXPIRY_KEY, (now + CACHE_DURATION_MS).toString());
 
                 setIsLoading(false);
             } catch (error) {
@@ -109,37 +137,37 @@ const Slider = () => {
 
 
     const animateWithClipPath = (direction) => {
-        const nextIndex = direction === 'next' 
-          ? (currentIndex + 1) % images.length
-          : (currentIndex - 1 + images.length) % images.length;
-    
+        const nextIndex = direction === 'next'
+            ? (currentIndex + 1) % images.length
+            : (currentIndex - 1 + images.length) % images.length;
+
         const currentSlide = slidesRef.current[currentIndex];
         const nextSlide = slidesRef.current[nextIndex];
-    
+
         if (!currentSlide || !nextSlide) return;
-    
+
         const tl = gsap.timeline();
-    
+
         // Animate current slide out
         tl.to(currentSlide, {
-          clipPath: direction === 'next' 
-            ? 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'  // Slide up
-            : 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', // Slide down
-          duration: 0.8,
-          ease: 'power2.inOut'
+            clipPath: direction === 'next'
+                ? 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'  // Slide up
+                : 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)', // Slide down
+            duration: 0.8,
+            ease: 'power2.inOut'
         });
-    
+
         // Animate next slide in
         tl.to(nextSlide, {
-          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-          duration: 0.8,
-          ease: 'power2.inOut',
-          onComplete: () => setCurrentIndex(nextIndex)
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 0.8,
+            ease: 'power2.inOut',
+            onComplete: () => setCurrentIndex(nextIndex)
         }, '-=0.6'); // Overlap animations
-      };
+    };
 
-      const goNext = () => animateWithClipPath('next');
-      const goPrev = () => animateWithClipPath('prev');
+    const goNext = () => animateWithClipPath('next');
+    const goPrev = () => animateWithClipPath('prev');
 
     // const goNext = () => {
     //     const nextIndex = (currentIndex + 1) % images.length;
@@ -164,11 +192,11 @@ const Slider = () => {
             <div className="slider-content">
                 <div className="slide-number">
                     {images.map((_, index) => (
-                        <span className={`number ${index === currentIndex ? 'active' : ''}`}>{index}</span>
+                        <span key={index} className={`number ${index === currentIndex ? 'active' : ''}`}>{index}</span>
                     ))}
                 </div>
 
-                
+
                 <button className="slider-button prev" onClick={goPrev}>
                     PREV
                 </button>
@@ -188,14 +216,14 @@ const Slider = () => {
             </div>
             <div className="slider" ref={sliderRef}>
                 {images.map((image, index) => (
-                     <div
-                     key={image.id}
-                     className="slide"
-                     ref={el => (slidesRef.current[index] = el)}
-                   >
-                    <h1 className='title text-white text-center text-4xl font-semibold' >{image.title}</h1>
-                     <img src={image.url} alt={image.alt} />
-                   </div>
+                    <div
+                        key={image.id}
+                        className="slide"
+                        ref={el => (slidesRef.current[index] = el)}
+                    >
+                        <h1 className='title text-white text-center text-4xl font-semibold' >{image.title}</h1>
+                        <img src={image.url} alt={image.alt} />
+                    </div>
                 ))}
             </div>
 
